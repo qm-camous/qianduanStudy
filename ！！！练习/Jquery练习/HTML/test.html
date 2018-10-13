@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img class="pull-right" id="bg_music_img" alt="背景音乐控制" style="margin:29px 0;" title="" src="" onclick="toggle()">
+<div id="jplayer"></div>
+<script src="jquery.jplayer.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var music_on=true;
+    var musics=new Array();
+    musics[0]="安妮的仙境.mp3";
+    musics[1]="初雪.mp3";
+    musics[2]="但愿如此.mp3";
+    musics[3]="回家.mp3";
+    musics[4]="加勒比海蓝.mp3";
+    musics[5]="梁祝.mp3";
+    musics[6]="誓言.mp3";
+    musics[7]="天空之城.mp3";
+    musics[8]="童年.mp3";
+    musics[9]="雨中漫步.mp3";
+    var index;
+    var $jplayer;
+    $(document).ready(function(){
+        //背景音乐
+        $jplayer = $("#jplayer").jPlayer({
+            swfPath: "Jplayer.swf",
+            ready: function () {
+                toggle();
+            },
+            ended: function () {
+                $(this).jPlayer("play");
+            },
+            supplied: "mp3"
+        });
+    });
+
+    function toggle(){
+        if(music_on){//开启
+            $("#bg_music_img").attr({ src: "on.png", title: "关闭背景音乐" });
+            //背景音乐
+            index=Math.round(Math.random()*9);
+            $jplayer.jPlayer("setMedia", {
+                mp3:musics[index]
+            }).jPlayer('play');
+            music_on=false;
+        }else{//停止
+            $("#bg_music_img").attr({ src: "off.png", title: "开启背景音乐" });
+            $("#jplayer").jPlayer("pause");
+            music_on=true;
+        }
+    }
+</script>
+</body>
+</html>

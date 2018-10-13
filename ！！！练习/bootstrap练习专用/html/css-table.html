@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-表格</title>
+	<!-- bootstrap-css -->
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	<!-- jquery.min.js -->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+		body{
+			padding: 50px
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航Start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role=""navigation>
+		<div class="container">
+		<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+		<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="css-paiban.html">排版</a></li>
+				<li><a href="css-shange.html">栅格布局</a></li>
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">表格</a>
+						<ul class="dropdown-menu">
+							<li><a href="#jiben">1.基本表格样式</a></li>
+							<li class="divider"></li>
+							<li><a href="#banmaxian">2.斑马线样式的表格</a></li>
+							<li class="divider"></li>
+							<li><a href="#biankuan">3.带边框的表格</a></li>
+							<li class="divider"></li>
+							<li><a href="#jingguo">4.鼠标经过的表格样式</a></li>
+							<li class="divider"></li>
+							<li><a href="#jincou">5.紧凑型表格样式</a></li>
+							<li class="divider"></li>
+							<li><a href="#xinxi">6.信息类的表格</a></li>
+							<li class="divider"></li>
+							<li><a href="#xiangying">7.响应式表格</a></li>
+						</ul>
+					</li>
+					<li><a href="biaodan.html">表单</a></li>
+					<li><a href="anniuVSpic.html">按钮和图片</a></li>
+					<li><a href="xialacaidan.html">下拉菜单</a></li>
+					<li><a href="daohang.html">导航</a></li>
+					<li><a href="medio.html">媒体对象</a></li>
+					<li><a href="mianbanzujian.html">面板组件</a></li>
+					<li><a href="well.html">well组件</a></li>
+					<li><a href="fenye.html">分页与标签</a></li>
+					<li><a href="liebiao.html">常用插件</a></li>
+					
+			</ul>
+		</div>
+		</div>
+	</nav>
+	<!-- 导航End -->
+	<div class="container all">
+		<!-- 基本表格样式Start -->
+		<div id="jiben" class="jumbotron" style="background-color:#CCFFFF">
+			<h3>1.基本的表格样式:class="table"</h3>
+			<table class="table">
+				<tr>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 基本表格样式End -->
+		<!-- 斑马线表格样式Start -->
+		<div id="banmaxian" class="jumbotron" style="background-color:#FFCCCC">
+			<h3>2.斑马线的表格样式:class="table-striped"</h3>
+			<p>存在问题：表头的颜色没有算进去</p>
+			<table class="table table-striped">
+				<tr>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 斑马线表格样式End -->
+		<!-- 带边框的表格样式Start -->
+		<div id="biankuan" class="jumbotron" style="background-color:#CC99CC">
+			<h3> 3.带边框的表格样式:class="table-bordered"</h3>
+			<table class="table table-bordered">
+				<tr>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--  带边框的表格样式End -->
+		<!-- 鼠标经过的表格样式Start -->
+		<div id="jingguo" class="jumbotron" style="background-color:#CCCC00">
+			<h3> 4.鼠标经过的表格样式：class="table-hover"</h3>
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--  鼠标经过的表格样式End -->
+		<!-- 紧凑型的表格样式Start -->
+		<div id="jincou" class="jumbotron" style="background-color:#99CC99">
+			<h3> 5.紧凑型的表格样式：class="table table-condensed"</h3>
+			<table class="table table-condensed">
+				<tr>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--  紧凑型的表格样式End -->
+		<!-- 信息类的表格样式Start -->
+		<div id="xinxi" class="jumbotron" style="background-color: #fff">
+			<h3> 6.信息类的表格样式：</h3>
+			<table class="table table-bordered">
+				<tr class="active">
+					<th>class="active"鼠标悬停上的一个样式</th>
+					<th>class="active"鼠标悬停上的一个样式</th>
+					<th>class="active"鼠标悬停上的一个样式</th>
+
+				</tr>
+				<tbody>
+					<tr class="success">
+						<td>class="success"成功</td>
+						<td>class="success"成功</td>
+						<td>class="success"成功</td>
+					</tr>
+					<tr class="info">
+						<td>class="info"</td>
+						<td>class="info"</td>
+						<td>class="info"</td>
+					</tr>
+					<tr class="warning">
+						<td>class="warning"警告</td>
+						<td>class="warning"警告</td>
+						<td>class="warning"警告</td>
+					</tr>
+					<tr class="danger">
+						<td>class="danger"危险</td>
+						<td>class="danger"危险</td>
+						<td>class="danger"危险</td>
+					</tr>
+					<tr>
+						<td>没有任何样式</td>
+						<td>没有任何样式</td>
+						<td>没有任何样式</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--  信息类的表格样式End -->
+					<!-- 响应式的表格样式Start -->
+		<div id="xiangying" class="container table-responsive" style="background-color:#99CC99">
+			<h3> 7.响应式的表格样式：外部需要有容器嵌套，父容器class="table-responsive"</h3>
+			<table class="table table-bordered">
+				<tr>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+					<th>表格表题</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+					<tr>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+						<td>表格单元格</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--  响应式的表格样式End -->
+		
+	</div>
+
+</body>
+</html>

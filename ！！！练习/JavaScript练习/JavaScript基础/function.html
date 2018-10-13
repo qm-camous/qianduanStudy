@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 函数</title>
+</head>
+<body>
+<a href="../index.html">返回首页</a>
+<h2>函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块。</h2>
+<div>
+    <h2>JavaScript 函数语法</h2>
+    <p>
+
+        函数就是包裹在花括号中的代码块，前面使用了关键词 function：
+
+       <pre>function functionname()
+            {
+            执行代码
+            }
+        </pre>
+    当调用该函数时，会执行函数内的代码。
+
+        可以在某事件发生时直接调用函数（比如当用户点击按钮时），并且可由 JavaScript 在任何位置进行调用。
+    </p>
+</div>
+<!--******************************************-->
+<div>
+    <h2>二、调用带参数的函数</h2>
+    <p>
+        在调用函数时，您可以向其传递值，这些值被称为参数。
+
+        这些参数可以在函数中使用。
+
+        您可以发送任意多的参数，由逗号 (,) 分隔：
+
+        myFunction(argument1,argument2)
+        当您声明函数时，请把参数作为变量来声明：
+
+            <pre>
+                function myFunction(var1,var2)
+                {
+                代码
+                }
+            </pre>
+        变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值，以此类推。
+    <p>
+        点击下面的按钮执行带参数的函数<button onclick="demo1('朱一龙','先生')">点击执行</button>
+    </p>
+    <p>
+        变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值，以此类推。
+
+        实例
+
+   <pre>
+        &lt;script&gt;
+           function demo1(name,gender) {
+             alert('Welcome to '+name+gender);
+            }
+        &lt;/script&gt;
+    </pre>
+    </p>
+</div>
+<!--******************************************-->
+<div>
+    <h2>三、带有返回值的函数</h2>
+    <p>
+        有时，我们会希望函数将值返回调用它的地方。
+
+        通过使用 return 语句就可以实现。
+
+        在使用 return 语句时，函数会停止执行，并返回指定的值。
+
+        语法:
+        <pre>
+            function myFunction()
+            {
+            var x=5;
+            return x;
+            }
+        </pre>
+    <button onclick="alert(demo2())">点击执行</button><br>
+        上面的函数会返回值 "This is a demo."。
+
+        注意： 整个 JavaScript 并不会停止执行，仅仅是函数。JavaScript 将继续执行代码，从调用函数的地方。</p>
+    <p>
+        可以使返回值基于传递到函数中的参数。
+
+        实例
+        计算两个数字的乘积，并返回结果：
+        <pre>
+            function myFunction(a,b)
+            {
+            return a*b;
+            }
+
+            document.getElementById("demo").innerHTML=myFunction(4,3);
+     </pre>
+    <button onclick="alert(demo3(3,4))">点击执行</button>
+    </p>
+</div>
+<!--******************************************-->
+</body>
+
+<!--******************************************-->
+<script>
+    //demo1(name,gender)带参数的函数
+    function demo1(name,gender) {
+        alert('Welcome to '+name+gender);
+    };
+//    demo2()带返回值的函数
+    function demo2() {
+        var a='This is a demo.';
+        return a;
+    };
+//    demo3(bcs,cs)可以使返回值基于传递到函数中的参数
+    function demo3(bcs,cs) {
+        return bcs*cs;
+    };
+</script>
+<!--******************************************-->
+</html>

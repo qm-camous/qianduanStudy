@@ -1,0 +1,118 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery - 删除元素
+    </div>
+    <div class="panel-body">
+        <!--###################01简介##########################-->
+        <div id="01">
+            <h3>一、简介</h3>
+            <p>
+                删除元素/内容：
+                如需删除元素和内容，一般可使用以下两个 jQuery 方法：<br>
+                remove() - 删除被选元素（及其子元素）
+                empty() - 从被选元素中删除子元素
+            </p>
+
+        </div>
+        <!--#####################02########################-->
+        <div id="02">
+            <h3>二、jQuery remove() 方法</h3>
+            <p>
+                jQuery remove() 方法删除被选元素及其子元素。
+            </p>
+            <div id="02_1" class="center-block" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_remove()">移除div</button>
+                </div>
+                <div id="02_2" class="center-block table-bordered" style="text-align: center;background-color: #f2dede">
+                    <div id="02_3">
+                        <pre>
+                《越人歌》
+            今夕何夕兮，搴舟中流。
+            今日何日兮，得与王子同舟。
+            蒙羞被好兮，不訾诟耻。
+            心几烦而不绝兮，得知王子。
+            山有木兮木有枝，心悦君兮君不知。
+                        </pre>
+                        <p>
+                               《木兰花·拟古决绝词柬友》
+                            人生若只如初见，何事秋风悲画扇。<br>
+                            等闲变却故人心，却道故人心易变。<br>
+                            骊山语罢清宵半，泪雨霖铃终不怨。<br>
+                            何如薄幸锦衣郎，比翼连枝当日愿。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--#####################03########################-->
+        <div id="03">
+            <h3>三、jQuery empty() 方法</h3>
+            <p>jQuery empty() 方法删除被选元素的子元素。</p>
+            <div id="03_1" class="center-block" style="background-color: #f2dede;text-align: center;">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_empty()">清空div元素</button>
+                </div>
+                <div id="03_2" class="center-block table-bordered" style="height:300px;text-align: center;background-color:#f2dede;">
+                        <p>
+                            《卜算子·我住长江头》<br>
+                            我住长江头，君住长江尾。<br>
+                            日日思君不见君，共饮长江水。<br>
+                            此水几时休，此恨何时已。<br>
+                            只愿君心似我心，定不负相思意。<br>
+                        </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--#######################04######################-->
+        <div id="04">
+            <h3>四、过滤被删除的元素</h3>
+            <p>
+                jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。<br>
+                该参数可以是任何 jQuery 选择器的语法。<br>
+                下面的例子删除 class="italic" 的所有&lt;p&gt;元素：<br>
+            </p>
+            <div id="04_1" class="center-block" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_removeP()">移除所有  class="aa" 的 p 元素</button>
+                </div>
+                <div id="04_2" class="center-block" style="background-color: #f2dede;text-align: center">
+                    <p>
+                    <p class="aa">《白头吟》</p><br>
+                        皑如山上雪，皎若云间月。<br>
+                        闻君有两意，故来相决绝。<br>
+                        今日斗酒会，明旦沟水头。<br>
+                        躞蹀御沟上，沟水东西流。<br>
+                        凄凄复凄凄，嫁娶不须啼。<br>
+                        愿得一心人，白头不相离。<br>
+                        竹竿何袅袅，鱼尾何簁簁！<br>
+                        男儿重意气，何用钱刀为！<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--#############################################-->
+        <!--#############################################-->
+        <!--#############################################-->
+        <!--#############################################-->
+    </div>
+</div>
+<!--######################scriptStart#######################-->
+<script>
+    //fun_remove()移除div及其子元素
+    function fun_remove() {
+        $("#02_3").remove();
+    };
+    //fun_empty()清空div元素
+    function fun_empty() {
+        $("#03_2").empty();
+    };
+    //fun_removeP()清楚指定的元素
+    function fun_removeP() {
+        $("#04_2 p").remove(".aa");
+    };
+</script>
+<!--######################scriptEnd#######################-->

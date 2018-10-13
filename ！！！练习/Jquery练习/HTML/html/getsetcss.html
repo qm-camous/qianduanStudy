@@ -1,0 +1,116 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery - 获取并设置 CSS 类
+    </div>
+    <div class="panel-body">
+        <!--###############01简介###################-->
+        <div id="01">
+            <h3>
+                一、简介
+            </h3>
+            <p>
+                jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：<br>
+                addClass() - 向被选元素添加一个或多个类<br>
+                removeClass() - 从被选元素删除一个或多个类<br>
+                toggleClass() - 对被选元素进行添加/删除类的切换操作<br>
+                css() - 设置或返回样式属性<br>
+            </p>
+        </div>
+        <!--###############02###################-->
+        <div id="02" class="row">
+            <h3>二、jQuery addClass() 方法</h3>
+            <div id="02_1" class="center-block table-bordered col-md-6" style="text-align: center;background-color: #f2dede">
+               <h3>jQuery addClass() 方法</h3>
+                <p>下面的例子展示如何向不同的元素添加 class 属性。当然，在添加类时，您也可以选取多个元素</p>
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_addclass()">添加一个类</button>
+                </div>
+                <div id="02_2">
+                    <p>这是一个段落！</p>
+                </div>
+            </div>
+            <div id="02_3" class="center-block table-bordered col-md-6" style="text-align: center;background-color: #f2dede">
+                <h3>在 addClass() 方法中规定多个类</h3>
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_addclass2()">同时添加多个类</button>
+                </div>
+                <div id="02_4">
+                    <p>这是第二个段落！</p>
+                </div>
+            </div>
+        </div>
+        <!--################03##################-->
+        <div id="03" class="row">
+            <h3>三、jQuery removeClass() 方法</h3>
+            <p>下面的例子演示如何在不同的元素中删除指定的 class 属性</p>
+            <div id="03_1" class="center-block" style="background-color: #f2dede;text-align: center">
+
+                <div class="row center-block table-bordered" style="text-align: center;background-color: #f2dede">
+                    <div id="03_2">
+                        <div class="form-group">
+                            <button class="btn btn-success" onclick="fun_removeclass()">移除元素的一个类</button>
+                        </div>
+                        <div id="r1">
+                            <p class="larger double">这是第一个段落！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row center-block table-bordered" style="text-align: center;background-color: #f2dede">
+                    <div id="03_3">
+                        <div class="form-group">
+                            <button class="btn btn-success" onclick="fun_removeclass2()">移除元素的多个类</button>
+                        </div>
+                        <div id="r2">
+                            <p class="larger double">这是第一个段落！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--################04##################-->
+        <div id="04" class="row">
+            <h3>四、jQuery toggleClass() 方法</h3>
+            <p>
+                下面的例子将展示如何使用 jQuery toggleClass() 方法。该方法对被选元素进行添加/删除类的切换操作
+            </p>
+            <div id="04_1" class="center-block" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_toggle()">进行添加/删除类的切换操作</button>
+                </div>
+                <div id="04_2" class="center-block table-bordered">
+                    <p class="double">这是第一个段落！</p>
+                    <p class="double">这是第二个段落！</p>
+                    <p class="double">这是第三个段落！</p>
+                    <p>这是第四个段落！</p>
+                </div>
+            </div>
+        </div>
+        <!--##################################-->
+        <!--##################################-->
+        <!--##################################-->
+    </div>
+</div>
+<!--###############################-->
+    <script>
+    // fun_addclass()为元素添加一个css类
+        function fun_addclass() {
+            $("#02_2 p,#02_4 p").addClass("larger");
+        };
+     //fun_addclass2()为一个元素添加多个类
+     function fun_addclass2() {
+         $("#02_4 p").addClass("larger double");
+     };
+     //fun_removeclass()移除元素的类
+        function fun_removeclass() {
+            $("#r1 p").removeClass("double");
+        };
+     //fun_removeclass2()移除元素的多个类
+        function fun_removeclass2() {
+            $("#r2 p").removeClass("larger double");
+        };
+//        fun_toggle()对所选元素进行添加删除类的切换操作
+        function fun_toggle() {
+            $("#04_2 p").toggleClass("double");
+        }
+</script>
+<!--###############################-->

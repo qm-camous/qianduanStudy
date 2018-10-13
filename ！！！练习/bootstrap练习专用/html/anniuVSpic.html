@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-按钮和图片</title>
+	<!-- bootstrap-css -->
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	<!-- jquery.min.js -->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+		body{
+			padding: 50px
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航Start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role=""navigation>
+		<div class="container">
+		<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+		<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="css-paiban.html">排版</a></li>
+				<li><a href="css-shange.html">栅格布局</a></li>
+				<li><a href="css-table.html">表格</a></li>
+				<li><a href="biaodan.html">表单</a></li>
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">按钮和图片</a>
+						<ul class="dropdown-menu">
+							<li><a href="#yangshi">1.1.各种button样式</a></li>
+							<li class="divider"></li>
+							<li><a href="#daxiao">2.button的大小</a></li>
+							<li class="divider"></li>
+							<li><a href="#a">3.button和a标签和input标签</a></li>
+							<li class="divider"></li>
+							<li><a href="#anniuzu">4.按钮组</a></li>
+							<li class="divider"></li>
+							<li><a href="#anniuzu2">5.按钮组和菜单的嵌套使用</a></li>
+							<li class="divider"></li>
+							<li><a href="#anniuzu3">6.按钮组铺满整个屏幕</a></li>
+							<li class="divider"></li>
+							<li><a href="#pic">7.图片</a></li>
+									
+						</ul>
+					</li>
+					<li><a href="xialacaidan.html">下拉菜单</a></li>
+					<li><a href="daohang.html">导航</a></li>
+					<li><a href="medio.html">媒体对象</a></li>
+					<li><a href="mianbanzujian.html">面板组件</a></li>
+					<li><a href="well.html">well组件</a></li>
+					<li><a href="fenye.html">分页与标签</a></li>
+					<li><a href="liebiao.html">常用插件</a></li>
+					
+					
+			</ul>
+		</div>
+		</div>
+	</nav>
+	<!-- 导航End -->
+	<!-- mainStart -->
+	<div class="container all">
+		<!-- button样式 -->
+		<div id="yangshi" class="jumbotron">
+			<h3>1.各种button样式</h3>
+			<button type="button" class="btn btn-default">class="btn btn-default"</button>
+			<button type="button" class="btn btn-primary">class="btn btn-primary"</button>
+			<button type="button" class="btn btn-success">class="btn btn-success"</button>
+			<button type="button" class="btn btn-info">class="btn btn-info"</button>
+			<button type="button" class="btn btn-warning">class="btn btn-warning"</button>
+			<button type="button" class="btn btn-link">class="btn btn-link"</button>
+			<button type="button" class="btn btn-danger">class="btn btn-danger"</button>
+		</div>
+	<!-- button大小 -->
+	<div id="daxiao" class="jumbotron">
+		<h3>2.button的大小</h3>
+		
+
+		<button type="button" class="btn btn-info btn-lg">btn-lg</button>
+		<button type="button" class="btn btn-info">默认</button>
+		<button type="button" class="btn btn-info btn-sm">btn-sm</button>
+		<button type="button" class="btn btn-info btn-xs">btn-xs</button>
+	</div>
+	<div id="a" class="jumbotron">
+		<h3>3.button和a标签和input标签</h3>
+		<p>通常a标签很常见，可以给其赋予button的样式，区别不大。也可以用input来表现button。</p>
+		<p>但是推荐使用button，在不同的浏览器中可能会因为版本原因导致一些不必要的问题。</p>
+	<button type="button" class="btn btn-default btn-block">btn-block块级化，充满父级元素</button>
+	<a href="#" class="btn btn-default btn-lg active" role="button">给a标签赋予button的类</a>
+		<a href="#" class="btn btn-default btn-lg active" disabled="disabled" role="button">a标签添加disabled属性，禁用状态</a>
+		<input type="button" class="btn btn-default" value="input" name="">
+	</div>
+
+	<!-- 按钮组Start -->
+	<div id="anniuzu" class="jumbotron">
+		<h3>4.按钮组</h3>
+		<p>常用作按钮工具栏</p>
+		<div class="btn-group btn-group-xs">
+			<button type="button" class="btn btn-default">left</button>
+			<button type="button" class="btn btn-default">middle</button>
+			<button type="button" class="btn btn-default">right</button>
+		</div>
+
+		<div class="btn-group btn-group-sm">
+			<button type="button" class="btn btn-default">left</button>
+			<button type="button" class="btn btn-default">middle</button>
+			<button type="button" class="btn btn-default">right</button>
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-default">left</button>
+			<button type="button" class="btn btn-default">middle</button>
+			<button type="button" class="btn btn-default">right</button>
+		</div>
+
+		<div class="btn-group btn-group-lg">
+			<button type="button" class="btn btn-default">left</button>
+			<button type="button" class="btn btn-default">middle</button>
+			<button type="button" class="btn btn-default">right</button>
+		</div>
+		<div class="btn-toolbar">
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-left"></span>
+				</button>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-center"></span>
+				</button>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-right"></span>
+				</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-left"></span>
+				</button>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-center"></span>
+				</button>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-right"></span>
+				</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-left"></span>
+				</button>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-center"></span>
+				</button>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-align-right"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- 按钮组End -->
+	<!-- 按钮组和菜单嵌套使用Start -->
+
+	<div id="anniuzu2" class="jumbotron">
+		<h3>5.按钮组和菜单的嵌套使用</h3>
+		<p>class="btn-group-vertical"垂直排列</p>
+		<div class="btn-group-vertical">
+			<button type="button" class="btn btn-default">1</button>
+			<button type="button" class="btn btn-default">2</button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					下拉菜单
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">点我</a></li>
+					<li><a href="#">点我</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 按钮组和菜单嵌套使用End -->
+	<div id="anniuzu3" class="jumbotron">
+		<h3>6.按钮组铺满整个屏幕</h3>
+		<p>class="btn-group btn-group-justified":btn-group-justified类控制充满整个屏幕</p>
+		<div class="btn-group btn-group-justified">
+			<div class="btn-group">
+				<button type="button" class="btn btn=-btn-default">left</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn=-btn-default">middle</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn=-btn-default">right</button>
+			</div>
+		</div>
+	</div>
+	<div id="pic" class="jumbotron">
+		<h3>7.图片</h3>
+		圆角图片class="img-circle":
+		<img src="../style/img/z03.jpg" alt="圆角图片" class="img-circle" style="width: 300px;height: 300px"><br>
+		代替圆角边框的方形图片class="img-rounded":
+		<img src="../style/img/z10.jpg" alt="代替圆角边框的方形图片" class="img-rounded" style="width: 300px;height: 300px"><br>
+		带边框的图片class="img-thumbnail":
+		<img src="../style/img/z44.jpg" alt="带边框的图片	" class="img-thumbnail" style="width: 300px;height: 300px">
+	</div>
+
+	</div> 
+	<!-- mainEnd -->
+
+</body>
+</html>

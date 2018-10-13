@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 简介</title>
+    <script>
+        document.write("<a href=\"../index.html\">返回首页</a>");
+        document.write("<h1>这是一个h1标题</h1>");
+        document.write("<p>这是一个段落。</p>");
+    </script>
+</head>
+<body>
+
+<p>
+    <label style="background-color: #f2dede">只能在 HTML 输出流</label>中使用 <strong>document.write</strong>。
+    如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+<div>
+    <button onclick="alert('欢迎！')">点我</button>
+</div>
+<div style="background-color: #f2dede;">
+    <p id="demo1">JavaScript能改变HTML元素内容。</p>
+    <button onclick="demo1()">点击这里</button>
+</div>
+<div>
+    <img id="deng" src="../style/img/pic_bulbon.gif" width="200px" height="250px" onclick="imgChange()">
+    <p>点击灯泡就可以控制这盏灯的亮灭</p>
+</div>
+<div style="background-color: #f2dede">
+    <h2 id="demo2">点击按钮可以改变我的颜色</h2>
+
+    <button onclick="demo2()">点击这里</button>
+</div>
+<div>
+    <p>请输入数字，如果不是数字，浏览器会弹出提示。(没有排除连续的空格)</p>
+    <input id="demo3" type="text" maxlength="16">
+    <button onclick="demo3()">点击这里</button>
+</div>
+</body>
+<script>
+    //demo1()改变文本内容
+    function demo1() {
+        a = document.getElementById("demo1");
+        a.innerHTML = "Hello JavaScript!";
+    }
+    //imgChange()点击图片控制灯的亮灭
+    function imgChange() {
+        img = document.getElementById("deng");
+        if(img.src.match("bulbon")){
+            img.src = "../style/img/pic_bulboff.gif";
+        }
+        else{
+            img.src = "../style/img/pic_bulbon.gif";
+        }
+    };
+//    demo2()改变HTML元素样式
+    function demo2() {
+        a = document.getElementById("demo2");
+        a.style.color="#f00";
+        a.style.fontSize="15px";
+    };
+//demo3()判断输入内容是否为数值
+    function demo3() {
+       var  a = document.getElementById("demo3").value;
+        if(a==""||isNaN(a)){
+            alert("您输入的不是数字！请重新输入！");
+        };
+
+    }
+
+</script>
+</html>

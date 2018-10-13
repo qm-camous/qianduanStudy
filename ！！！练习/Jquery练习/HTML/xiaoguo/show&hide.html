@@ -1,0 +1,84 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jquery显示和隐藏
+    </div>
+    <div class="panel-body">
+        <!--##############操作区Start####################-->
+        <h3>一、基本的显示和隐藏</h3>
+        <div class="form-group">
+            <button class="btn btn-success" onclick="hide_p()">点我隐藏P元素</button>
+            <button class="btn btn-success" onclick="show_p()">点我显示P元素</button>
+        </div>
+
+        <div id="01">
+            <p>第一个段落。</p>
+            <p>第二个段落。</p>
+            <p>第三个段落。</p>
+            <p>第四个段落。</p>
+            <p>第五个段落。</p>
+        </div>
+        <h3>二、设置隐藏和显示速度</h3>
+        <p>$(selector).hide(speed,callback);<br>
+            $(selector).show(speed,callback);<br>
+            可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。<br>
+            可选的 callback 参数是隐藏或显示完成后所执行的函数名称。<br>
+        </p>
+        <div id="02" class="row">
+            <div id="02_1" class="col-md-8 center-block table-bordered" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" onclick="hide_div()">隐藏</button>
+                    <button type="button" class="btn btn-success" onclick="show_div()">显示</button>
+                </div>
+            </div>
+
+            <div id="02_2" class="center-block col-md-8 table-bordered" style="text-align: center;background-color: #f2dede">
+                <p><h4>点上面我会消失的！</h4></p>
+            </div>
+        </div>
+
+        <h3>三、toggle()直接控制显示和隐藏</h3>
+            <p>
+                通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。<br>
+                显示被隐藏的元素，并隐藏已显示的元素<br>
+            </p>
+        <div class="form-group">
+            <button type="button" class="btn btn-success" onclick="toggle()">显示/隐藏</button>
+            <button type="button" class="btn btn-success" onclick="toggle_speed()">显示/隐藏（带速度）</button>
+        </div>
+        <div id="03">
+            <img src="../style/IMG/z10.jpg" style="width: 150px;height: 150px">
+        </div>
+        <!--##############script区Start####################-->
+        <script>
+            // 点我隐藏P元素
+            function hide_p() {
+                $("#01 p").hide();
+            };
+
+             // 点我隐藏P元素
+            function show_p() {
+                $("#01 p").show();
+            };
+            // 设置隐藏速度
+            function hide_div() {
+                $("#02_2").hide(1500);
+            }
+            // 设置显示速度
+            function show_div() {
+                $("#02_2").show(1500);
+            };
+            // toggle()直接控制显示和隐藏
+            function toggle() {
+                $("#03 img").toggle();
+            };
+            //toggle_speed()控制显示和隐藏的速度
+            function toggle_speed() {
+                $("#03 img").toggle(1500,function () {
+                    alert("操作完毕！");
+                });
+            };
+        </script>
+
+        <!--##############script区End####################-->
+    </div>
+</div>

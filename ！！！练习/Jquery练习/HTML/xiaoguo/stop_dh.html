@@ -1,0 +1,45 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery 停止动画
+    </div>
+    <div class="panel-body">
+       <h3>一、jQuery stop() 方法</h3>
+        <p>jQuery stop() 方法用于停止动画或效果，在它们完成之前。<br>
+
+        stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。<br>
+
+        语法:<br>
+
+        <pre>$(selector).stop(stopAll,goToEnd);</pre>
+        可选的 stopAll 参数规定是否应该清除动画队列。默认是 false，即仅停止活动的动画，允许任何排入队列的动画向后执行。<br>
+
+        可选的 goToEnd 参数规定是否立即完成当前动画。默认是 false。<br>
+
+        因此，默认地，stop() 会清除在被选元素上指定的当前动画。<br>
+        </p>
+        <!--########################01###########################-->
+        <div  class="center-block row table-bordered" style="text-align: center;background-color: #f2dede">
+            <button class="btn btn-success" onclick="stop_dh()">停止</button>
+            <button class="btn btn-success" onclick="slide_toggle()">开始下滑</button>
+        </div>
+        <div id="01" class="center-block row table-bordered" style="text-align: center;background-color: #f2dede;">
+            <h3>加油，好好学习，努力赚大钱！</h3>
+        </div>
+        <!--###################################################-->
+        <!--###################################################-->
+        <!--##########################script区域#########################-->
+        <script>
+            //stop_dh()停止动画，不带参数
+            function stop_dh() {
+                $("#01").stop();
+                // $("#01 h3").hide();
+            };
+            //slide_toggle()控制div的活动
+            function slide_toggle() {
+                // $("#01 h3").show();
+                $("#01").slideToggle(3000);
+            }
+        </script>
+        <!--###################################################-->
+    </div>
+</div>

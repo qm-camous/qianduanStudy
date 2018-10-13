@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript if...Else 语句</title>
+</head>
+<body>
+<a href="../index.html">返回首页</a>
+<!--*******************01**********************-->
+<div id="01">
+    <h2>一、条件语句简介</h2>
+    <p>
+
+        通常在写代码时，您总是需要为不同的决定来执行不同的动作。您可以在代码中使用条件语句来完成该任务。
+
+        在 JavaScript 中，我们可使用以下条件语句：<br>
+        <pre style="font-size: 20px">
+            if 语句 - 只有当指定条件为 true 时，使用该语句来执行代码
+            if...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码
+            if...else if....else 语句- 使用该语句来选择多个代码块之一来执行
+            switch 语句 - 使用该语句来选择多个代码块之一来执行
+         </pre>
+    </p>
+</div>
+<!--********************02*********************-->
+<div id="02">
+    <h2>二、if 语句</h2>
+    <p>
+        只有当指定条件为 true 时，该语句才会执行代码。
+
+        语法：
+        <pre style="font-size: 20px">
+            if (condition)
+            {
+            当条件为 true 时执行的代码
+            }
+        </pre>
+    </p>
+    <p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+    <button onclick="demo2()">点击获取结果</button>
+    <p id="demo2"></p>
+</div>
+<!--******************03***********************-->
+<div id="03">
+    <h2>三、if...else 语句</h2>
+    <p>
+        请使用 if....else 语句在条件为 true 时执行代码，在条件为 false 时执行其他代码。
+
+        语法:<br>
+        <pre style="font-size: 20px">
+            if (condition)
+            {
+            当条件为 true 时执行的代码
+            }
+            else
+            {
+            当条件不为 true 时执行的代码
+            }
+        </pre>
+    <p>
+        当时间小于 20:00 时，生成问候 "Good day"，否则生成问候 "Good evening"。
+        <button onclick="demo3()">点击执行</button>
+    </p>
+    <p id="demo3"></p>
+</div>
+<!--******************04***********************-->
+<div id="04">
+    <h2>四、if...else if...else 语句</h2>
+    <p>
+        使用 if....else if...else 语句来选择多个代码块之一来执行。
+
+        语法：<br>
+        <pre style="font-size: 20px">
+        if (condition1)
+        {
+        当条件 1 为 true 时执行的代码
+        }
+        else if (condition2)
+        {
+        当条件 2 为 true 时执行的代码
+        }
+        else
+        {
+        当条件 1 和 条件 2 都不为 true 时执行的代码
+        }
+    </pre>
+    </p>
+    <p>
+        如果时间小于 10:00，则生成问候 "Good morning"，如果时间大于 10:00 小于 20:00，则生成问候 "Good day"，否则生成问候 "Good evening"：
+    </p>
+    <button onclick="demo4()">点击执行</button>
+    <p id="demo4"></p>
+</div>
+<!--*****************************************-->
+<!--*****************************************-->
+<!--*****************************************-->
+<!--*****************************************-->
+</body>
+<!--*******************scriptStart***********************-->
+<script>
+    //demo2()如果时间早于 20:00，会获得问候 "Good day"
+function demo2() {
+    var time='';
+    var x= new Date().getHours();
+    if(x<20){
+        time='Good day';
+    }
+    document.getElementById("demo2").innerHTML=time;
+};
+//if..else..
+    function demo3() {
+        var time = '';
+        var a=new Date().getHours();
+        if (a<20){
+            time='Good day';
+        }
+        else {
+            time='Good ningt';
+        };
+        document.getElementById("demo3").innerHTML=time;
+    };
+//    if...else if..else
+    function demo4() {
+        var a='';
+        var time=new Date().getHours();
+        if (time<10){
+            a='Good moring';
+        }else if(time>10&&time<20){
+            a='Good day';
+        }else {
+            a='Good ningt';
+        };
+        document.getElementById("demo4").innerHTML=a;
+    }
+</script>
+<!--*******************scriptEnd***********************-->
+</html>

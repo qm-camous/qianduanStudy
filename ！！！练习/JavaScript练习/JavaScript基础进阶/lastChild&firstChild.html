@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>子节点的第一项和最后一项</title>
+</head>
+<body onload="load()">
+<div id="con">
+    <p>javascript</p>
+    <div>jQuery</div>
+    <h5>PHP</h5>
+</div>
+<script type="text/javascript">
+    function load() {
+        var x = document.getElementById("con");
+        alert(x.firstChild.nodeName);
+        alert(x.lastChild.nodeName);
+        alert("000");
+    }
+</script>
+</body>
+</html>

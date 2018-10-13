@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>浏览器对象</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<!--先编写好网页布局-->
+
+<h2>操作成功</h2>
+<p><strong id="time">5</strong>秒后返回首页发 <a href="#" onclick="back()">返回</a></a></p>
+<script type="text/javascript">
+
+    //获取显示秒数的元素，通过定时器来更改秒数。
+    var mytime=document.getElementById("time").innerHTML;
+    alert(mytime);
+    function time(){
+        mytime=mytime-1;
+        document.getElementById("time").innerHTML=mytime;
+        //alert(mytime);
+        while (mytime==0){
+            alert(mytime);
+            window.location.assign("http://www.baidu.com");
+            clearInterval(i);
+            break;
+        };
+        };
+    var i=setInterval("time()",1000);
+    //通过window的location和history对象来控制网页的跳转。
+function back() {
+    window.history.back();
+}
+</script>
+</body>
+</html>

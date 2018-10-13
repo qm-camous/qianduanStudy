@@ -1,0 +1,113 @@
+<div class="panel panel-info">
+    <div class="panel-heading"> jQuery - AJAX get() 和 post() 方法</div>
+    <div class="panel-body">
+        <!--******************01*************************-->
+        <div id="01">
+            <h3>一、  HTTP 请求：GET vs. POST</h3>
+            <p>
+                Query get() 和 post() 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据。<br>
+                两种在客户端和服务器端进行请求-响应的常用方法是：GET 和 POST。<br>
+
+                GET - 从指定的资源请求数据<br>
+                POST - 向指定的资源提交要处理的数据<br>
+                GET 基本上用于从服务器获得（取回）数据。注释：GET 方法可能返回缓存数据。<br>
+
+                POST 也可用于从服务器获取数据。不过，POST 方法不会缓存数据，并且常用于连同请求一起发送数据。<br>
+
+                如需学习更多有关 GET 和 POST 以及两方法差异的知识，请阅读我们的 HTTP 方法 - GET 对比 POST。<br>
+            </p>
+        </div>
+        <!--********************02***********************-->
+        <div id="02">
+            <h3>二、jQuery $.get() 方法</h3>
+            <p>
+                $.get() 方法通过 HTTP GET 请求从服务器上请求数据。<br>
+
+                语法：<br>
+            <pre>$.get(URL,callback);</pre>
+                必需的 URL 参数规定您希望请求的 URL。<br>
+
+                可选的 callback 参数是请求成功后所执行的函数名。<br>
+
+                下面的例子使用 $.get() 方法从服务器上的一个文件中取回数据：
+            </p>
+            <div id="02_1" class="center-block" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_get()">通过 HTTP GET 请求从服务器上请求数据</button>
+                </div>
+            </div>
+        </div>
+        <!--************************03*******************-->
+        <div id="03">
+            <h3>三、jQuery $.post() 方法</h3>
+            <p>
+                $.post() 方法通过 HTTP POST 请求向服务器提交数据。<br>
+
+                语法:<br>
+
+                <pre>$.post(URL,data,callback);</pre>
+                必需的 URL 参数规定您希望请求的 URL。<br>
+
+                可选的 data 参数规定连同请求发送的数据。<br>
+
+                可选的 callback 参数是请求成功后所执行的函数名。<br>
+
+                下面的例子使用 $.post() 连同请求一起发送数据：
+            </p>
+            <div id="03_1" class="form-group">
+                <button class="btn btn-success" onclick="fun_post()">通过 HTTP POST 请求向服务器提交数据</button>
+            </div>
+            <div class="center-block" style="text-align: center;background-color: #f2dede;">
+                <p>
+                    $.post() 的第一个参数是我们希望请求的 URL ("demo_test_post.php")。<br>
+
+                    然后我们连同请求（name 和 url）一起发送数据。<br>
+
+                    "demo_test_post.php" 中的 PHP 脚本读取这些参数，对它们进行处理，然后返回结果。<br>
+
+                    第三个参数是回调函数。第一个回调参数存有被请求页面的内容，而第二个参数存有请求的状态。<br>
+                </p>
+                <pre style="text-align: left">
+                      &lt;?php
+                                $name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+                                $url = isset($_POST['url']) ? htmlspecialchars($_POST['url']) : '';
+                                echo '网站名: ' . $name;
+                                echo "\n";
+                                echo 'URL 地址: ' .$url;
+                           ?&gt;
+                </pre>
+            </div>
+        </div>
+        <!--*******************************************-->
+        <!--*******************************************-->
+        <!--*******************************************-->
+        <!--*******************************************-->
+        <!--*******************************************-->
+        <!--*******************************************-->
+        <!--*******************************************-->
+    </div>
+</div>
+<!--*****************scriptStart**************************-->
+<script>
+//fun_get()使用get方法获取服务器数据
+    function fun_get() {
+        $("#02_1 button").click(function () {
+            $.get("ajax/demo.php", function (data, status) {
+                alert("数据为："+data+"状态为："+status);
+            });
+        });
+    };
+    //fun_post()通过 HTTP POST 请求向服务器提交数据
+    function fun_post() {
+        $("#03_1 button").click(function () {
+            $.post("ajax/post.php",
+                {
+                    name:"朱一龙",
+                    url:"最帅！"
+                },function (data,status) {
+                    alert("数据为："+data+"状态为："+status);
+                });
+        });
+    }
+</script>
+<!--*****************scriptEnd**************************-->

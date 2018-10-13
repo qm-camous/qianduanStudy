@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-常用插件</title>
+<!-- bootstrap-css -->
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	<!-- jquery.min.js -->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+		body{
+			padding: 50px
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航Start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role=""navigation>
+		<div class="container">
+		<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+		<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="css-paiban.html">排版</a></li>
+				<li><a href="css-shange.html">栅格布局</a></li>
+				<li><a href="css-table.html">表格</a></li>
+				<li><a href="biaodan.html">表单</a></li>
+				<li><a href="anniuVSpic.html">按钮和图片</a></li>
+				<li><a href="xialacaidan.html">下拉菜单</a></li>
+				<li><a href="daohang.html">导航</a></li>
+				<li><a href="medio.html">媒体对象</a></li>
+				<li><a href="mianbanzujian.html">面板组件</a></li>
+				<li><a href="well.html">well组件</a></li>
+				<li class="divider"></li>
+				<li><a href="fenye.html">分页与标签</a></li>
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">常用插件</a>
+						<ul class="dropdown-menu">
+							
+							<li><a href="#01">1.列表组</a></li>
+							<li class="divider"></li>
+							<li><a href="#02">2.单纯的翻页效果</a></li>
+							<li class="divider"></li>
+							<li><a href="#03">3.标签</a></li>
+							<li class="divider"></li>
+							<li><a href="#04">4.徽章</a></li>
+							<li class="divider"></li>
+							<li><a href="#05">5.巨幕</a></li>
+							<li class="divider"></li>
+							<li><a href="#06">6.页头</a></li>
+							<li class="divider"></li>
+							<li><a href="#07">7.缩略图</a></li>
+							<li class="divider"></li>
+							<li><a href="#08">8.提示框</a></li>
+							<li class="divider"></li>
+							<li><a href="#09">9.进度条</a></li>
+							
+						</ul>
+					</li>
+
+				
+			</ul>
+		</div>
+		</div>
+	</nav>
+	<!-- 导航End -->
+	<!-- ++++++++++++++mainStart+++++++++++++++++++++ -->
+	<div class="container all">
+		<!-- js提示Start -->
+		<div class="jumbotron">
+			<h3>本页代码js中写明了滚条的禁用与启动。</h3>
+		</div>
+		<!-- js提示End -->
+		<!-- 模态框Start -->
+
+		<div id="01" class="jumbotron">
+			<!-- 基本的模态框Start -->
+			<h2>1.模态框</h2>
+			<h3>1.1.基本的模态框</h3>
+			<p>最下方有一个js方法用来启动模态框</p>
+			<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">
+							模态框标题
+						</h4>
+					</div>
+					<div class="modal-body">
+						模态框内容部分
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- 基本的模态框Start -->
+			<!-- ********************** -->
+			<!-- 通过按钮触发模态框Start -->
+			<h3>1.2.通过按钮触发模态框</h3>
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">启动模态框</button>
+			<!-- 通过按钮触发模态框End -->
+			<!-- ********************** -->
+			<!-- 模态框的大小尺寸Start -->
+			<h3>1.3.不同大小尺寸的模态框</h3>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal">启动大模态框</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">默认启动模态框</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".sm-example-modal">启动小模态框</button>
+			<!-- 大的模态框Start -->
+			<div class="modal fade bs-example-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModal" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					
+					<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-labelledby="myModalLabel" aria-hidden="true"><span aria-hidden="true">
+							&times;
+						</span></button>
+						<h2 class="modal-title">大模态框标题</h2>
+					</div>
+					<div class="modal-body">
+						这是一个大的模态框！
+						</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!-- 大的模态框End -->
+			<!-- 默认模态框Start -->
+			<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">
+							模态框标题
+						</h4>
+					</div>
+					<div class="modal-body">
+						模态框内容部分
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- 默认模态框End -->
+			<!-- 小的模态框Start -->
+			<div class="modal fade sm-example-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModal" aria-hidden="true">
+				<div class="modal-dialog modal-sm">
+					
+					<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-labelledby="myModalLabel" aria-hidden="true"><span aria-hidden="true">
+							&times;
+						</span></button>
+						<h2 class="modal-title">小模态框标题</h2>
+					</div>
+					<div class="modal-body">
+						这是一个小的模态框！
+						</div>
+					<div class="modal-footer">
+						
+						<button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!-- 小的模态框End -->
+
+			<!-- 模态框的大小尺寸End -->
+			<!-- **********没有懂是做什么的************ -->
+			<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2" data-whatever="@mdo">Open modal for @mdo
+			</button>
+			<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="close">&times;</span></button>
+							<h4 class="modal-title" id="modal2label">New Message</h4>				
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="recipient-name" class="control-label">
+								recipient:</label>
+									<input type="text" class="form-control" id="recipient-name" name="">
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary">保存</button>
+						</div>
+					</div>
+			
+				</div>
+			</div> -->
+			<!-- **********没有懂是做什么的************ -->
+
+			<!-- ********************** -->
+			<!-- ********************** -->
+		</div>
+		<!-- 模态框End -->
+		<!-- 下拉菜单Start -->
+		<div id="02" class="jumbotron">
+			<h3>2.下拉菜单(javascript的角度)</h3>
+			<div class="dropdown">
+				<button class="btn btn-default" id="dlabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					下拉菜单<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dlabel">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					
+				</ul>
+			</div>
+
+		</div>
+		<!-- 下拉菜单End -->
+		<!-- 弹出窗Start -->
+		<div id="03" class="jumbotron">
+			<h3>3.弹出窗</h3>
+			<button type="button" class="btn btn-primary js-popover" data-toggle="popover" title="标题" data-content="这里是内容">弹出窗在右侧</button> 
+			<button type="button" class="btn btn-primary js-popover" data-placement="left" data-toggle="popover" title="标题" data-content="这里是内容">弹出窗在左侧</button>
+			<button type="button" class="btn btn-primary js-popover" data-placement="top" data-toggle="popover" title="标题" data-content="这里是内容">弹出窗在上面</button>
+			<button type="button" class="btn btn-primary js-popover" data-placement="bottom" data-toggle="popover" title="标题" data-content="这里是内容">弹出窗在下面</button>
+			<button type="button" class="btn btn-primary js-popover" data-placement="bottom" data-toggle="popover" title="标题" data-content="这里是内容" data-trigger="fouse">可点击消失的弹出窗</button>
+		</div>
+		<!-- 弹出窗End -->
+	</div>
+	<!-- ++++++++++++++mainEnd+++++++++++++++++++++ -->
+<!-- JS代码部分Start -->
+<!-- 模态框Start -->
+<script type="text/javascript">
+	// $("#myModal").modal("show");
+</script>
+<!-- <script type="text/javascript">
+	$("#modal2").on("show.")
+</script> -->
+<!-- 模态框End -->
+<!-- 弹出窗 -->
+<script type="text/javascript">
+	$(".js-popover").popover();
+</script>
+<!-- 滚动条 -->
+<script type="text/javascript">
+	//禁止滚动条
+  $(document.body).css({
+    "overflow-x":"hidden",
+    "overflow-y":"hidden"
+  });
+
+  //启用滚动条
+  $(document.body).css({
+  "overflow-x":"auto",
+  "overflow-y":"auto"
+  });
+</script>
+<!-- JS代码部分End -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery Callback 方法
+    </div>
+    <div class="panel-body">
+        <!--##################简介####################-->
+        <div>
+            <h3>简介</h3>
+            <p>
+                Callback 函数在当前动画 100% 完成之后执行<br>
+                许多 jQuery 函数涉及动画。这些函数也许会将 speed 或 duration 作为可选参数。<br>
+
+                例子：
+            <pre>$("p").hide("slow")</pre>
+
+                speed 或 duration 参数可以设置许多不同的值，比如 "slow", "fast", "normal" 或毫秒。<br>
+
+            </p>
+
+        </div>
+        <!--#################示例一01#####################-->
+        <div class="row center-block table-bordered" style="background-color: #f2dede;text-align: center">
+            <p>以下实例在隐藏效果完全实现后回调函数:</p>
+            <button type="button" class="btn btn-success" onclick="callback()">开始带回调函数</button>
+            <button type="button" class="btn btn-success" onclick="callback_without()">开始不带回调函数</button>
+        </div>
+        <div id="01" class="row center-block table-bordered" style="background-color: #f2dede;text-align: center" >
+            <h3>加油好好学习，你可以的！</h3>
+            <h3>专心做一件事，一定可以把这件事做好！</h3>
+        </div>
+        <!--######################################-->
+        <!--#################script区域#####################-->
+        <script>
+            //callback()带回调函数
+            function callback() {
+                $("#01").slideToggle(1500,function () {
+                    alert("操作完成！我是回调函数！");
+                });
+            };
+            //callback()不带回调函数
+            function callback_without() {
+                $("#01").slideToggle();
+                alert("我是alter，不知道操作是否完成！");
+            };
+        </script>
+        <!--######################################-->
+    </div>
+</div>

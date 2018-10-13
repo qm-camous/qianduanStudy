@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 对象</title>
+</head>
+<body>
+<a href="../index.html">返回首页</a>
+<!--**********************************************-->
+<h2>JavaScript 对象是属性和方法的容器</h2>
+<div>
+    <h2>一、对象定义</h2>
+    <p>
+        你可以使用字符来定义和创建 JavaScript 对象:
+    <pre>var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</pre>
+    <button onclick="demo1()">点击执行</button>
+    </p>
+</div>
+<!--**********************************************-->
+
+
+<div>
+    <h2>二、对象方法</h2>
+    <p>
+        对象的方法定义了一个函数，并作为对象的属性存储。
+
+        对象方法通过添加 () 调用 (作为一个函数)。
+
+        该实例访问了 person 对象的 fullName() 方法:
+
+<pre>name = person.fullName();</pre>
+    <button onclick="demo2()">点击执行</button>
+    </p>
+</div>
+<!--****************************************-->
+<div>
+    <h2>三、访问对象方法</h2>
+    <p>
+        你可以使用以下语法创建对象方法：
+
+    <pre style="background-color: #9acfea">methodName : function() { code lines }</pre>
+    你可以使用以下语法访问对象方法：
+
+    <pre style="background-color: #9acfea">objectName.methodName()</pre>
+    通常 fullName() 是作为 person 对象的一个方法， fullName 是作为一个属性。
+
+    有多种方式可以创建，使用和修改 JavaScript 对象。
+
+    同样也有多种方式用来创建，使用和修改属性和方法。
+    </p>
+</div>
+<!--**********************************************-->
+<!--**********************************************-->
+<!--**********************************************-->
+</body>
+<!--****************scriptStart***************-->
+<script>
+//demo1()用字符来定义和创建js对象
+    function demo1() {
+        var person = {
+            firstname:'朱',
+            lastname:'一龙',
+            age:30,
+            profession:'演员'
+        };
+        alert('firstname:'+person.firstname+'==='+'lastname'+person.lastname+'==='+'age:'+person.age+'==='
+            +'professsion:'+person.profession);
+    };
+//    demo2()对象方法
+    function demo2() {
+        
+        var person = {
+            firstname:'朱',
+            lastname:'一龙',
+            age:30,
+            profession:'演员',
+            fullname:function () {
+                          return this.firstname+this.lastname;
+                    },
+        };
+        var name=person.fullname();
+        alert(name);
+        alert(person.fullname());
+    }
+</script>
+<!--****************scriptEnd***************-->
+</html>

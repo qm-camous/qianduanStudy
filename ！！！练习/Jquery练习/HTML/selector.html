@@ -1,0 +1,182 @@
+<div id="scroll" class="panel panel-info">
+        <div class="panel-heading">
+            Jquery选择器
+        </div>
+        <div class="panel-body">
+            <!--简介-->
+           <div class="well well-sm">
+               <p>元素选择器：$(p).hidden();隐藏所有的p元素</p>
+               <p>#id 选择器:$("#demo").hidden();</p>
+               <p>.class 选择器:$(".demo").hidden();</p>
+           </div>
+            <!--实例Start-->
+            <!--点击事件（操作）区-->
+            <div class="well well-sm">
+                <h3>选择操作</h3>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default" onclick="hidden_all()">隐藏所有元素</button>
+                    <button type="button" class="btn btn-default" onclick="show_all()" >显示所有元素</button>
+                    <button type="button" class="btn btn-default" onclick="hidden_pp()">隐藏class="p"元素</button>
+                    <button type="button" class="btn btn-default" onclick="show_pp()" >显示class="p"元素</button>
+                    <button type="button" class="btn btn-default" onclick="p1()">获取第一个p元素</button>
+                    <button type="button" class="btn btn-default" onclick="ul11()">选取第一个 &lt;ul&gt; 元素的第一个 &lt;li&gt; 元素</button>
+                    <button type="button" class="btn btn-default" onclick="every_ul11()">选取每个 &lt;ul&gt;元素的第一个&lt;li&gt; 元素</button>
+                    <button type="button"  class="btn btn-default" onclick="href()">选取带有 href 属性的元素</button>
+                    <button type="button" class="btn btn-default" onclick="target_blank()">选取所有 target 属性值等于 "_blank" 的 &lt;a&gt; 元素</button>
+                    <button type="button" class="btn btn-default" onclick="NOT_target_blank()">选取所有 target 属性值不等于 "_blank" 的 &lt;a&gt; 元素</button>
+                    <button type="button" class="btn btn-default" onclick="button()">选取type="button" 的 &lt;input&gt; 元素 和 &lt;button&gt; 元素</button>
+                    <button type="button" class="btn btn-default" onclick="even()">选取偶数位置的 &lt;tr&gt; 元素</button>
+                    <button type="button" class="btn btn-default" onclick="table_odd()">选取奇数数位置的 &lt;tr&gt; 元素</button>
+                </div>
+            </div>
+            <!--元素展示区-->
+            <div id="display" class="well well-sm">
+
+                <a href="#" target="_parent">这是一个target="_parent"的连接元素</a>
+                <a href="#" target="_blank">这是一个target="_blank连接元素</a>
+                <a href="#" target="_self">这是一个target="_self"连接元素</a>
+
+                <p class="p">这个段落的class="p"！</p>
+                <p>这是第二个段落！</p>
+                <p>这是第三个段落！</p>
+
+                <input type="button" class="btn btn-default" value="我是type='button'的input">
+                <button type="button" class="btn btn-default">按钮1</button>
+                <button type="button" class="btn btn-default">按钮2</button>
+                <button type="button" class="btn btn-default">按钮3</button>
+
+                <table class="table table-info table-bordered table-responsive">
+                    <thead>
+                    <tr>
+                        <th>标题1</th>
+                        <th>标题1</th>
+                        <th>标题1</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>单元格1</td>
+                        <td>单元格2</td>
+                        <td>单元格3</td>
+                    </tr>
+                    <tr>
+                        <td>单元格1</td>
+                        <td>单元格2</td>
+                        <td>单元格3</td>
+                    </tr>
+                    <tr>
+                        <td>单元格1</td>
+                        <td>单元格2</td>
+                        <td>单元格3</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <ul class="list-unstyled">
+                    <li class="list-group-item-info">列表</li>
+                    <li class="list-group-item-info" >列表</li>
+                    <li class="list-group-item-info">列表</li>
+                    <li class="list-group-item-info">列表</li>
+                    <li class="list-group-item-info">列表</li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="list-group-item-info">列表2</li>
+                    <li class="list-group-item-info">列表2</li>
+                    <li class="list-group-item-info">列表2</li>
+                    <li class="list-group-item-info">列表2</li>
+                    <li class="list-group-item-info">列表2</li>
+                </ul>
+            </div>
+
+            <!--实例End-->
+        </div>
+</div>
+<!--隐藏页面所有元素-->
+<script>
+    function hidden_all() {
+
+           $("#display *").hide();
+
+    };
+    //显示所有元素
+    function show_all() {
+        $("#display *").show();
+    };
+//    获取指定class的p元素
+    function hidden_pp() {
+        $(".p").hide();
+
+    };
+    function show_pp() {
+        $(".p").show();
+    };
+
+    //    选取第一个p元素
+    function p1() {
+        $("#display p:first").css({
+            "color":"#f00"
+        })
+    };
+//    选取第一个 <ul> 元素的第一个 <li> 元素
+    function ul11() {
+        $("#display ul li:first").css({
+            "color":"#ff0"
+        })
+    };
+//    选取每个 <ul> 元素的第一个 <li> 元素
+    function every_ul11() {
+        $("#display ul li:first-child").css({
+            "color":"#FF0033",
+            "font-size":"30px"
+        })
+    };
+//    选取带有 href 属性的元素
+    function href() {
+        $("#display [href]").css({
+            "display":"block",
+            "color":"#99CC00",
+            "font-size":"25px"
+        })
+    };
+//    选取所有 target 属性值等于 "_blank" 的 <a> 元素
+    function target_blank() {
+        alert("111");
+        $("#display a[target='_blank']").css({
+            "display":"block",
+            "font-size":"25px"
+        });
+        $("#display a[target='_blank']").text("我的target属性为'_blank'");
+        alert("0000");
+    };
+//    选取所有 target 属性值不等于 "_blank" 的 <a> 元素
+    function NOT_target_blank() {
+        $("#display a[target!='_blank']").css({
+            "display":"block",
+            "color":"#f00",
+            "font-size":"25px",
+        });
+        $("#display a[target!='_blank']").text("我们的target属性不是'_blank'")
+
+
+    };
+//    选取所有 type="button" 的 <input> 元素 和 <button> 元素
+    function button() {
+        $("#display :button").removeClass("btn-default");
+        $("#display :button").addClass("btn-success");
+
+    };
+//    选取偶数位置的 <tr> 元素
+    function even() {
+        $("#display tr:even").css({
+            "background-color":"#993333",
+        })
+    };
+//    选取奇数位置的 <tr> 元素
+    function table_odd() {
+        $("#display tr:odd").css({
+            "background-color":"#c96",
+        })
+    }
+
+</script>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 输出</title>
+</head>
+<body>
+<a href="../index.html">返回首页</a>
+<div>
+    <h2>一、简介</h2>
+    <p>JavaScript 没有任何打印或者输出的函数。<br>
+        <h4>JavaScript 显示数据</h4>
+        JavaScript 可以通过不同的方式来输出数据：<br>
+        1、使用 window.alert() 弹出警告框。<br>
+        2、使用 document.write() 方法将内容写到 HTML 文档中。<br>
+        3、使用 innerHTML 写入到 HTML 元素。<br>
+        4、使用 console.log() 写入到浏览器的控制台。<br>
+    </p>
+</div>
+<!--***********************alert弹窗*****************************-->
+<div style="background-color: #9acfea">
+    使用 window.alert()
+    你可以弹出警告框来显示数据：<button onclick="demo1()">点我显示弹窗</button>
+</div>
+<!--************************操作HTML元素************************-->
+<div>
+    <h2>二、操作 HTML 元素</h2>
+    <p>
+        如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。
+
+        请使用 "id" 属性来标识 HTML 元素，并 innerHTML 来获取或插入元素内容：
+    </p>
+    <p id="demo2">这是一个段落！</p>
+    <button onclick="demo2()">点我改变上面段落内容</button>
+
+</div>
+<!--****************************************************-->
+<div>
+    <h2>三、写到 HTML 文档</h2>
+    <p>
+       <strong>
+           请使用 document.write() 仅仅向文档输出写内容。
+           如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
+       </strong>
+        出于测试目的，您可以将JavaScript直接写在HTML 文档中：
+        <button onclick="demo3()">点我执行示例</button>
+    </p>
+    <p id="demo3"></p>
+</div>
+<!--*************************写到控制台*********************************-->
+<div>
+    <h2>四、写到控制台</h2>
+    <p>
+        如果您的浏览器支持调试，你可以使用 console.log() 方法在浏览器中显示 JavaScript 值。
+
+        浏览器中使用 F12 来启用调试模式， 在调试窗口中点击 "Console" 菜单。
+    </p>
+    <button onclick="demo4()">点我执行</button>
+</div>
+</body>
+<!--************************scriptStart****************-->
+<script>
+    //demo1()弹窗显示数据
+    function demo1() {
+        a = 4;
+        b = 6;
+        c = a+b;
+        alert("a:"+a+"   b:"+b+"    a+b="+(a+b));
+    };
+//    demo2()操作HTML元素
+    function demo2() {
+       a = document.getElementById("demo2");
+       a.innerHTML = "我变了，你看到了吗？";
+    };
+//    demo3()写到 HTML 文档
+    function demo3() {
+        document.write(Date());
+    };
+//    demo4()写到控制台
+    function demo4() {
+        a = 4;
+        b = 6;
+        c = a+b;
+        console.log(c);
+    }
+</script>
+<!--************************scriptEnd********************-->
+</html>

@@ -1,0 +1,38 @@
+<div class="panel panel-info">
+        <div class="panel-heading">
+            jquery语法
+        </div>
+        <div class="panel-body">
+           <p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。</p>
+
+            <p>基础语法： $(selector).action()</p>
+
+            <p> 美元符号定义 jQuery</p>
+            <p> 选择符（selector）"查询"和"查找" HTML 元素</p>
+            <p> jQuery 的 action() 执行对元素的操作</p>
+            <p> 实例:</p>
+
+            <p> $(this).hide() - 隐藏当前元素</p>
+
+            <p>$("p").hide() - 隐藏所有 &lt;p&gt; 元素</p>
+
+            <p>$("p.test").hide() - 隐藏所有 class="test" 的 &lt;p&gt;元素</p>
+
+            <p>$("#test").hide() - 隐藏所有 id="test" 的元素</p>
+            <div>
+                <h4>文档就绪事件</h4>
+                <p> $(document).ready(function () {<br>
+                    alert("页面加载完毕！");<br>
+                    })<br>
+                </p>
+            </div>
+        </div>
+
+</div>
+<script>
+    $(document).ready(function () {
+        alert("页面加载完毕！");
+    })
+</script>
+
+

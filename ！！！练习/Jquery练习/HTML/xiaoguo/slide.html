@@ -1,0 +1,122 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery 效果 - 滑动
+    </div>
+    <div class="panel-body">
+        <!--#####################################################-->
+        <h3>简介</h3>
+        <p>jQuery 滑动方法。 通过 jQuery，可以在元素上创建滑动效果。<br>
+            jQuery 拥有以下滑动方法：<br>
+
+            slideDown();<br>
+            slideUp();<br>
+            slideToggle()。<br>
+        </p>
+        <!--**********************01***********************-->
+        <div id="01" class="row">
+
+            <h3>一、jQuery slideDown() 方法</h3>
+            <p>   jQuery slideDown() 方法用于向下滑动元素。<br>
+
+                语法:<br>
+
+              <pre>$(selector).slideDown(speed,callback);</pre>
+            可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br>
+
+                可选的 callback 参数是滑动完成后所执行的函数名称。<br>
+            </p>
+            <div id="01_1" class="row col-md-10 center-block table-bordered" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" onclick="slide_down()">向下滑动</button>
+                    <button type="button" class="btn btn-success" onclick="slide_up()">向上滑动</button>
+                    <button type="button" class="btn btn-success" onclick="slide_down_speed()">向下滑动带速度</button>
+                    <button type="button" class="btn btn-success" onclick="slide_up_speed()">向上滑动带速度</button>
+                </div>
+            </div>
+            <div id="01_2" class="row col-md-10 center-block table-bordered" style="text-align: center;background-color: #f2dede">
+                <p>
+                    梦游天姥吟留别<br>
+                    &nbsp;&nbsp;&nbsp;[唐] 李白<br>
+                    海客谈瀛洲，烟涛微茫信难求。<br>
+                    越人语天姥，云霞明灭或可睹。<br>
+                    天姥连天向天横，势拔五岳掩赤城。<br>
+                    天台四万八千丈，对此欲倒东南倾。<br>
+                    我欲因之梦吴越，一夜飞度镜湖月。<br>
+                    湖月照我影，送我至剡溪。<br>
+                    谢公宿处今尚在，渌水荡漾清猿啼。<br>
+                    脚著谢公屐，身登青云梯。<br>
+                    半壁见海日，空中闻天鸡。<br>
+                    千岩万转路不定，迷花倚石忽已暝。<br>
+                    熊咆龙吟殷岩泉，栗深林兮惊层巅。<br>
+                    云青青兮欲雨，水澹澹兮生烟。<br>
+                    列缺霹雳，丘峦崩摧。洞天石扉，訇然中开。<br>
+                    青冥浩荡不见底，日月照耀金银台。<br><br>
+                    霓为衣兮风为马，云之君兮纷纷而来下。
+                    虎鼓瑟兮鸾回车，仙之人兮列如麻。<br>
+                    忽魂悸以魄动，恍惊起而长嗟。<br>
+                    惟觉时之枕席，失向来之烟霞。<br>
+                    世间行乐亦如此，古来万事东流水。<br>
+                    别君去兮何时还，且放白鹿青崖间，<br>
+                    须行即骑访名山。安能摧眉折腰事权贵，<br>
+                    使我不得开心颜。<br>
+                </p>
+            </div>
+        </div>
+
+        <!--******************02*************************-->
+        <div id="02" class="row center-block" >
+        <h3>二、 jQuery slideToggle() 方法</h3>
+        <p>jQuery slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。<br>
+
+
+            如果元素向下滑动，则 slideToggle() 可向上滑动它们。<br>
+
+            如果元素向上滑动，则 slideToggle() 可向下滑动它们。<br>
+
+        <pre>$(selector).slideToggle(speed,callback);</pre>
+            可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br>
+            可选的 callback 参数是滑动完成后所执行的函数名称。<br>
+        </p>
+            <div id="02_1" class="col-md-8 center-block table-bordered" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="slide_toggle()">slideToggle()直接控制下滑和上滑</button>
+                    <button class="btn btn-success" onclick="slide_toggle_speed()">slideToggle()直接控制下滑和上滑（带速度）</button>
+                </div>
+            </div>
+            <div id="02_2" class="center-block table-bordered col-md-8" style="text-align: center;background-color: #f2dede">
+                <img src="../style/IMG/z09.jpg" style="width: 150px;height:150px">
+            </div>
+        </div>
+
+        <!--##################################################-->
+        <!--#####################script区域#############################-->
+        <script>
+            //slide_down()向下滑动
+            function slide_down() {
+                $("#01_2").slideDown();
+            };
+            //slide_up()向上滑动
+            function slide_up() {
+                $("#01_2").slideUp();
+            };
+        //    slide_down_speed()向下滑动带速度
+            function slide_down_speed() {
+                $("#01_2").slideDown(1500);
+            };
+        //    slide_up_speed()向上滑动带速度
+            function slide_up_speed() {
+                $("#01_2").slideUp(1500);
+            };
+        //    slide_toggle()直接控制上滑和下滑
+            function slide_toggle() {
+                $("#02_2 img").slideToggle();
+            };
+        //    slide_toggle_speed()直接控制上滑和下滑（带速度）
+            function slide_toggle_speed() {
+                $("#02_2 img").slideToggle(2000);
+            }
+        </script>
+
+        <!--##################################################-->
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="panel panel-info">
+    <div class="panel-heading"> jQuery - AJAX load() 方法</div>
+    <div class="panel-body">
+        <!--*******************01**********************-->
+        <div id="01">
+            <h3>一、jQuery load() 方法</h3>
+            <p>
+                jQuery load() 方法是简单但强大的 AJAX 方法。<br>
+
+                load() 方法从服务器加载数据，并把返回的数据放入被选元素中。<br>
+
+                语法:<br>
+
+                <pre>
+                  $(selector).load(URL,data,callback);
+                </pre>
+            必需的 URL 参数规定您希望加载的 URL。<br>
+
+                可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。<br>
+
+                可选的 callback 参数是 load() 方法完成后所执行的函数名称。<br>
+            </p>
+            <div id="01_1" class="center-block" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_load1()">把文件 "text.html" 的内容加载到指定的 &lt;div&gt; 元素中</button>
+                </div>
+                <div id="01_2" class="center-block table-bordered">
+                    <p>使用 jQuery AJAX 修改文本内容</p>
+                </div>
+            </div>
+        </div>
+        <!--*******************02**********************-->
+        <div id="02" class="center-block" style="background-color: #f2dede;text-align: center">
+            <h3>把 jQuery 选择器添加到 URL 参数。</h3>
+            <p>下面的例子把 "text.html" 文件中 id="p1" 的元素的内容，加载到指定的 &lt;div&gt; 元素中</p>
+            <div class="form-group">
+                <button class="btn btn-success" onclick="fun_load2()">加载指定元素</button>
+            </div>
+            <div id="02_1">
+                <p>使用 jQuery AJAX 修改文本内容</p>
+            </div>
+        </div>
+        <!--******************03***********************-->
+        <div id="03">
+            <h3>三、可选的 callback 参数规定当 load() 方法完成后所要允许的回调函数。</h3>
+            <p>回调函数可以设置不同的参数：<br>
+                responseTxt - 包含调用成功时的结果内容<br>
+                statusTXT - 包含调用的状态<br>
+                xhr - 包含 XMLHttpRequest 对象<br>
+                下面的例子会在 load() 方法完成后显示一个提示框。如果 load() 方法已成功，则显示"外部内容加载成功！"，而如果失败，则显示错误消息
+            </p>
+            <div id="03_1" class="center-block" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_load3()">带回调函数的ajax</button>
+                </div>
+                <div id="03_2" class="center-block table-bordered">
+                    <p>带回调函数的ajax</p>
+                </div>
+            </div>
+        </div>
+        <!--*****************************************-->
+        <!--*****************************************-->
+        <!--*****************************************-->
+        <!--*****************************************-->
+        <!--*****************************************-->
+        <!--*****************************************-->
+    </div>
+</div>
+<!--*******************scriptStart**********************-->
+<script>
+    //fun_load1()">把文件 "demo_test.txt" 的内容加载到指定的 &lt;div&gt; 元素中
+    function fun_load1() {
+        $("#01_2").load("ajax/text.html");
+    };
+//    fun_load2()">加载指定元素
+    function fun_load2() {
+        $("#02_1").load("ajax/text.html #p1");
+    };
+    //    fun_load3()带回调函数的ajax
+    function fun_load3() {
+        $("#02_1").load("ajax/text.html",function (response,status,xhr) {
+            if(status=="success"){
+                alert("页面加载成功！");
+            }
+            else{
+                alert(xhr.status+xhr.statusText);
+            }
+        });
+    }
+</script>
+<!--*******************scriptEnd**********************-->

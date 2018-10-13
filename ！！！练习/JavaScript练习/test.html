@@ -1,0 +1,75 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>系好安全带,准备启航</title>
+
+    <script type="text/javascript">
+
+        //通过javascript的日期对象来得到当前的日期，并输出。
+        //星期数组
+        var week=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六');
+        //获取日期
+        var date=new Date();
+        //获取年
+        var year=date.getFullYear();
+        //获取月
+        var month=date.getMonth();
+        // 获取日
+        var day=date.getDay();
+        var today='';
+        //获取星期
+        switch(day){
+            case 0:today='星期日';
+                break;
+            case 1:today='星期一';
+                break;
+            case 2:today='星期二';
+                break;
+            case 3:today='星期三';
+                break;
+            case 4:today='星期四';
+                break;
+            case 5:today='星期五';
+                break;
+            case 6:today='星期六';
+                break;
+            default:today='这是你造的吗？';
+        };
+        //拼接字符串输出
+        alert(year+'年'+month+'月'+day+'日'+' '+today);
+
+
+
+
+
+        //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+        var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+
+        //切割字符串成数组(姓名：成绩)
+        var number=scoreStr.split(";");
+        //单拿出成绩到一个数组中
+        var score=new Array();  //用于存储成绩
+        //提取成绩到数组score中
+        for(i=0;i<number.length;i++){
+            var per=number[i].split(":");
+            score[i]=parseInt(per[1]);
+        };
+
+        //从数组中将成绩撮出来，然后求和取整，并输出。
+        var sum=0;//sum存储成绩和
+        alert(typeof sum);
+        for(j=0;j<score.length;j++){
+            sum+=score[j];
+        };
+        alert(sum);//输出成绩和
+        //ave平均值
+        var ave=sum/(score.length);
+        //打印平均值
+        alert("平均出成绩为："+ave);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

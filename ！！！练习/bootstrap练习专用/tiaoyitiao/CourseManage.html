@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>添加选课</title>
+	
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	
+	<script type="text/javascript" src="../style/js/jquery-1.10.2.js"></script>
+	
+	<script type="text/javascript" src="../style/js/bootstrap.min.js"></script>
+	
+    
+</head>
+<body>
+<div class="page-inner">
+	<div class="container">
+		<div class="panel panel-default">
+			<!-- 添加选课头部 -->
+			<h1 class="panel-heading">添加选课</h1>
+			<!-- 添加选课mainStart -->
+			<!-- panelbodyStart -->
+			<div class="panel-body">
+				<div class="jumbotron" style="background-color: #FFE2E5">
+					<table class="table table-responsive table-condensed table-hover">
+						<thead>教师列表</thead>
+						<tr>
+							<th>工号</th>
+							<th>教师姓名</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>张三</td>
+							<td>
+								<button  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#paike">排课</button>
+							</td>
+						</tr>
+						<tr>
+							<td>002</td>
+							<td>李四</td>
+							<td>
+								<button class="btn btn-danger btn-sm">排课</button>
+							</td>
+						</tr>
+						<tr>
+							<td>003</td>
+							<td>王五</td>
+							<td>
+								<button  class="btn btn-danger btn-sm">排课</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- panelbodyEnd -->
+			<!-- 添加选课mainEnd -->
+
+		</div>
+	</div>
+</div>
+<!-- 添加排课详情模态框Start -->
+<div class="modal fade" id="paike" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">添加课程</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                        	<div class="container col-md-12">
+                                        		<!-- 选择班级Start -->
+                                          <label class="block-inline">请选择班级：
+                                          </label>
+                                        
+                                        <form class="form-group" id="classSelect">
+                                        	
+                                        	<label for="c1"><input id="c1"type="checkbox" >初一1班</label>
+                                        	<label id="c2"><input type="checkbox" >初一2班</label>
+                                        	<label id="c3"><input type="checkbox" >初一3班</label>
+                                        	<label id="c4"><input type="checkbox" >初一4班</label>
+
+                                        	<label id="c5"><input type="checkbox" >初一5班</label>
+                                        	
+
+                                        	
+                                        </form>
+                                        		<!-- 选择班级End -->
+                                        		<!-- 显示已经选择的班级tab页Start -->
+                                        		<!-- 已选班级tab页Start -->
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                            已选班级
+                        </div>
+                        <div class="panel-body">
+                            <ul class="nav nav-tabs" id="classSelected">
+                            	<li id="haha"></li>
+                                <li class="active"><a href="#class1" data-toggle="tab" aria-expanded="true">初一1班</a>
+                                </li>
+                                <li class=""><a href="#class2" data-toggle="tab" aria-expanded="false">初一2班</a>
+                                </li>
+                               
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="class1">
+                                    <h4>请选择学科：</h4>
+                                     
+                                        <form class="form-group ">
+                                        	
+                                        	<label for="yuwen"><input id="yuwen" type="checkbox" >语文</label>
+                                        	<label><input type="checkbox" >数学</label>
+                                        	<label><input type="checkbox" >英语</label>
+                                        	
+                                        	
+                                        </form>
+                                </div>
+                                <div class="tab-pane fade" id="class2">
+                                    <h4>请选择学科：</h4>
+                                    
+                                        <form class="form-group ">
+                                        	
+                                        	<label><input type="checkbox" >语文2</label>
+                                        	<label><input type="checkbox" >数学2</label>
+                                        	<label><input type="checkbox" >英语2</label>
+                                        	
+                                        </form>
+                                </div>
+                             
+                               
+                            </div>
+                        </div>
+                    </div>
+                                        		<!-- 已选班级tab页End -->
+
+                                        		<!-- 显示已经选择的班级tab页End -->
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                            <button type="button" class="btn btn-primary">提交</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- 添加排课详情模态框End -->
+
+<script type="text/javascript">
+	$("form#classSelect").on("click","input",function(){  
+					 alert($(this).parent().text());
+					
+                  // var txt1=$('<li><a></a></li>').text($(this).parent().text());
+
+                    // txt1+=txt1.text($(this).parent().text());
+                   // var banji=$("#haha").before(txt1);
+
+                    // banji.children("a").attr("data-toggle","tab");
+                    //===================================
+                     var txt2=$('<li></li>');
+                     var txt3=$('<a></a>');
+                     txt3+=txt3.attr("data-toggle","tab");
+                     txt2+=txt2.before(txt3);
+                      var banji=$("#haha").before(txt3);
+                    //=======================
+				 });
+					 //增加新分页页头Start
+
+					// <li class=""><a href="#class2" data-toggle="tab" aria-expanded="false">初一2班</a>
+     //                            </li>
+
+//var txt2=$("<i></i>").text("love ");     // 通过 jQuery 创建元素
+//var txt3=document.createElement("big");  // 通过 DOM 创建元素
+//txt3.innerHTML="jQuery!";
+//$("img").after(txt1,txt2,txt3);          // 在 img 之后插入新元素
+ //}
+					 //增加新分页页头End
+
+</script>
+
+</body>
+</html>

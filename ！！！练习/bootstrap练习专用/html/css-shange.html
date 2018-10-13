@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-栅格系统</title>
+	<!-- bootstrap-css -->
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	<!-- jquery.min.js -->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			padding: 50px;
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	.mar-right{
+		margin-right: 30px;
+		font-size: 18px;
+	}
+	.row{
+		margin-bottom: 20px;
+	}
+	.row .row{
+		margin-top: 10px;
+		margin-bottom: 0
+	}
+	[class*="col-"]{
+		padding-top: 15px;
+		padding-bottom: 15px;
+		color: #fff;
+		background-color: #99CC99;
+		/*背景的透明度*/
+		background-color: rgba(86,61,124,.50);
+		border: 1px solid #ddd;
+		border: 1px solid rgba((86,61,124,.2)
+
+	}
+	</style>
+</head>
+<body>
+	<!-- 导航栏Start -->
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="css-paiban.html">排版</a></li>
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">栅格布局</a>
+						<ul class="dropdown-menu">
+							<li><a href="#jianjie">1.栅格布局简介</a></li>
+							
+							<li class="divider"></li>
+							<li><a href="#canshu">2.各种参数</a></li>
+							<li class="divider"></li>
+							<li><a href="#shili">3.示例</a></li>
+						</ul>
+					</li>
+					<li><a href="css-table.html">表格</a></li>
+					<li><a href="biaodan.html">表单</a></li>
+					<li><a href="anniuVSpic.html">按钮和图片</a></li>
+					<li><a href="xialacaidan.html">下拉菜单</a></li>
+					<li><a href="daohang.html">导航</a></li>
+					<li><a href="medio.html">媒体对象</a></li>
+					<li><a href="mianbanzujian.html">面板组件</a></li>
+					<li><a href="well.html">well组件</a></li>
+					<li><a href="fenye.html">分页与标签</a></li>
+					<li><a href="liebiao.html">常用插件</a></li>
+					
+				</ul>
+			</div>
+		</div>
+</nav>
+	<!-- 导航栏End -->
+	<!-- container容器Start -->
+<div class="container all">
+
+	<div id="jianjie" class="jumbotron" style="background-color: #FFFF99">
+		<h2>栅格系统简介：</h2>
+		<p>栅格系统必须要通过container承载，container容器包括class="container"和class="container-fluid"两个类，后者占用整个视口的整个面积，实现最大化，通常使用class="container"即可。</p>
+		<p>栅格系统最多将系统分为12列，通过行和列布局</p>
+	</div>
+	<div id="canshu" class="jumbotron" style="background-color: #99CCFF">
+		<h3>参数</h3>
+		<p>都是12列，槽宽30px。可嵌套可偏移可排序。</p>
+		<p>1.分比率小于768px（手机）。在手机上水平排列，会自动堆放。宽度自适应。前缀".col-xs-"</p>
+		<p>2.分比率大于768px（主要是PAD）。宽度最大750px。前缀".col-sm-"</p>
+		<p>3.分比率大992px（主要是小屏幕的多媒体显示器）。宽度最大970px,前缀".col-md-"</p>
+		<p>4.分比率大1200px（主要是大屏幕的多媒体显示器）。宽度最大1170px,前缀".col-lg-"</p>
+	</div>
+	<div id="shili" class="jumbotron" style="background-color: #CCFF99">
+		<h3>示例</h3>
+
+		<!-- 示例Start -->
+			<div class="row">
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-8">col-md-8</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-4">col-md-4</div>
+				<div class="col-md-4">col-md-4</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">内容过多的时候会自适应调整高度。col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3</div>
+				<div class="col-md-3">col-md-3</div>
+				<div class="col-md-3">col-md-3</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">col-md-6</div>
+				<div class="col-md-6">col-md-6</div>
+			</div>
+			<!-- 偏移 -->
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2">col-md-offset-x实现偏移</div>
+			</div>
+			<!-- 嵌套 -->
+			<div class="row">
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="col-xs-8">
+							栅格布局的嵌套
+						</div>
+					</div>
+					one
+					<div class="row">
+						<div class="col-xs-8">
+							jakfsalg;ihk
+						</div>
+					</div>
+					two
+					<div class="row">
+						<div class="col-xs-8">
+							as;ldgjsr
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 排序 -->
+			<div class="row">
+				<div class="col-md-9 col-md-push-3">col-md-push-3改变排序</div>
+				<div class="col-md-3 col-md-pull-9">col-md-pull-9改变排序</div>
+			</div>
+			
+			
+		<!-- 示例End -->
+	</div>
+</div>
+	<!-- container容器Start -->
+
+</body>
+</html>

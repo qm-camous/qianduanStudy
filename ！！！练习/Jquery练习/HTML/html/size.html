@@ -1,0 +1,125 @@
+<div class="panel panel-info">
+    <div class="panel-heading">jQuery 尺寸</div>
+    <div class="panel-body">
+        <!--####################01简介#################-->
+        <div id="01">
+            <h3>一、jQuery 尺寸</h3>
+            <p>
+                通过 jQuery，很容易处理元素和浏览器窗口的尺寸。
+                jQuery 提供多个处理尺寸的重要方法：<br>
+                width()<br>
+                height()<br>
+                innerWidth()<br>
+                innerHeight()<br>
+                outerWidth()<br>
+                outerHeight()<br>
+            </p>
+        </div>
+        <!--###################02   ##################-->
+        <div>
+            <img src="../style/IMG/p1.png">
+        </div>
+        <!--################03#####################-->
+        <div id="03">
+            <h3>三、jQuery width() 和 height() 方法</h3>
+            <p>
+                width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。<br>
+                height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。<br>
+                下面的例子返回指定的元素的宽度和高度：<br>
+            </p>
+            <div class="center-block" style="background-color: #f2dede;text-align: center">
+            <div class="form-group">
+                <button class="btn btn-success" onclick="fun_size1()">获取元素的width和height</button>
+                <button class="btn btn-success" onclick="fun_size2()">设置元素的width和height</button>
+            </div>
+            <div id="03_1" class="center-block" style="background-color: #f2dede;text-align: center">
+                <p style="background-color: #2aabd2">这是一个演示段落</p>
+            </div>
+            </div>
+        </div>
+        <!--###################04##################-->
+        <div id="04">
+            <h3>四、jQuery innerWidth() 和 innerHeight() 方法</h3>
+            <p>
+                innerWidth() 方法返回元素的宽度（包括内边距）。<br>
+                innerHeight() 方法返回元素的高度（包括内边距）。<br>
+                下面的例子返回指定元素的 inner-width/height：<br>
+            </p>
+            <div id="04_1" class="center-block" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_size3()">获取指定元素的宽度（包括内边距）</button>
+                    <!--<button class="btn btn-success" onclick="fun_size4()">获取指定元素的高度（包括内边距）</button>-->
+                </div>
+                <div id="04_2" class="center-block table-bordered">
+                    <p style="background-color: #2aabd2">
+                                《山园小梅二首》<br>
+                                    宋代林逋<br>
+                        众芳摇落独暄妍，占尽风情向小园。<br>
+                        疏影横斜水清浅，暗香浮动月黄昏。<br>
+                        霜禽欲下先偷眼，粉蝶如知合断魂。<br>
+                        幸有微吟可相狎，不须檀板共金樽。<br>
+                                                        <br>
+                        剪绡零碎点酥乾，向背稀稠画亦难。<br>
+                        日薄从甘春至晚，霜深应怯夜来寒。<br>
+                        澄鲜只共邻僧惜，冷落犹嫌俗客看。<br>
+                        忆着江南旧行路，酒旗斜拂堕吟鞍。<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--#################05####################-->
+        <div id="05">
+            <h3>五、jQuery outerWidth() 和 outerHeight() 方法</h3>
+            <p>
+                outerWidth() 方法返回元素的宽度（包括内边距和边框）。<br>
+                outerHeight() 方法返回元素的高度（包括内边距和边框）。<br>
+                下面的例子返回指定的元素的 outer-width/height：<br>
+            </p>
+            <div class="center-block" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_size4()">返回元素的宽度和高度（包括外边距和边框）</button>
+                </div>
+                <div id="05_1" class="center-block table-bordered">
+                    <p style="background-color: #2aabd2">
+                        《离思五首·其四》<br>
+                        唐代元稹<br>
+                        曾经沧海难为水，除却巫山不是云。<br>
+                        取次花丛懒回顾，半缘修道半缘君。<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--#####################################-->
+        <!--#####################################-->
+        <!--#####################################-->
+        <!--#####################################-->
+    </div>
+</div>
+<!--*****************scriptStart***************************-->
+<script>
+//fun_size1()设置所选元素的width和height
+    function fun_size1() {
+       var width =  $("#03_1 p").width();
+       var height = $("#03_1 p").height();
+       alert("段落的宽度为："+width+"段落的高度为："+height);
+    };
+//fun_size2()设置所选元素的width和height
+function fun_size2() {
+    var width =  $("#03_1 p").width("500px");
+    var height = $("#03_1 p").height("100px");
+    // alert("段落的宽度为："+width+"段落的高度为："+height);
+};
+//fun_size3()获取指定元素的宽度（包括内边距）
+    function fun_size3() {
+        var width = $("#04_2 p").innerWidth();
+        var height = $("#04_2 p").innerHeight();
+        alert("段落的宽度为（包括内边距）："+width+"段落的高度为（包括内边距）："+height);
+    };
+//fun_size4()获取指定元素的宽度（包括外边距）
+    function fun_size4() {
+        var width = $("#05_1 p").outerWidth();
+        var height = $("#05_1 p").outerHeight();
+        alert("段落的宽度为（包括外边距）："+width+"段落的高度为（包括外边距）："+height);
+    }
+</script>
+<!--*****************scriptEnd***************************-->

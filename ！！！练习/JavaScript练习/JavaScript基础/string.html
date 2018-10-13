@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 字符串</title>
+</head>
+<body>
+<a href="../index.html">返回首页</a>
+<!--*****************1简介**************************-->
+<div id="01">
+    <h2>一、JavaScript 字符串</h2>
+    <p>
+        JavaScript 字符串用于存储和处理文本。
+    </p>
+</div>
+<!--*******************02************************-->
+<div id="02">
+    <h2>二、JavaScript 字符串</h2>
+    <p>
+        字符串可以存储一系列字符，如 "John Doe"。
+
+        字符串可以是插入到引号中的任何字符。你可以使用单引号或双引号，实例：
+        <pre>
+            var carname = "Volvo XC60";
+            var carname = 'Volvo XC60';
+        </pre>
+    </p>
+</div>
+<!--**********************03length*********************-->
+<div id="03">
+    <h2>三、字符串长度</h2>
+    <p>
+        可以使用内置属性 length 来计算字符串的长度：
+    <p id="demo3">检测字符串长度，212aaa。</p>
+    <button onclick="demo3()">点击计算上面段落的长度</button>
+    </p>
+</div>
+<!--*********************04**********************-->
+<div id="04">
+    <h2>四、特殊字符</h2>
+    <p>
+        在 JavaScript 中，字符串写在单引号或双引号中。<br>
+        反斜杠是一个转义字符。 转义字符将特殊字符转换为字符串字符：<br>
+        转义字符 (\) 可以用于转义撇号，换行，引号，等其他特殊字符。<br>
+        下表中列举了在字符串中可以使用转义字符转义的特殊字符：<br>
+    </p>
+    <table>
+        <tbody><tr>
+            <th>代码</th>
+            <th>输出</th>
+        </tr>
+        <tr>
+            <td>\'</td>
+            <td>单引号</td>
+        </tr>
+        <tr>
+            <td>\"</td>
+            <td>双引号</td>
+        </tr>
+        <tr>
+            <td>\\</td>
+            <td>反斜杠</td>
+        </tr>
+        <tr>
+            <td>\n</td>
+            <td>换行</td>
+        </tr>
+        <tr>
+            <td>\r</td>
+            <td>回车</td>
+        </tr>
+        <tr>
+            <td>\t</td>
+            <td>tab(制表符)</td>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>退格符</td>
+        </tr>
+        <tr>
+            <td>\f</td>
+            <td>换页符</td>
+        </tr>
+        </tbody></table>
+</div>
+<!--*******************05************************-->
+<div id="05">
+    <h2>五、字符串可以是对象</h2>
+    <p>
+        通常， JavaScript 字符串是原始值，可以使用字符创建： var firstName = "John"<br>
+
+        但我们也可以使用 new 关键字将字符串定义为一个对象： var firstName = new String("John")<br>
+
+        实例
+        <pre>
+            var x = "John";
+            var y = new String("John");
+            typeof x // 返回 String
+            typeof y // 返回 Object
+        </pre>
+    <button onclick="demo5()">点击执行</button>
+    <p>
+        <strong>不要创建 String 对象。它会拖慢执行速度，并可能产生其他副作用:</strong><br>
+       <pre>
+            var x = "John";
+            var y = new String("John");
+            (x === y) // 结果为 false，因为 x 是字符串，y 是对象
+        </pre>
+        尝试一下 »<button onclick="demo6()">点击执行</button>
+       " === "为绝对相等，即数据类型与值都必须相等。
+    </p>
+</div>
+<!--*******************06***********************-->
+<div id="06">
+    <h2>六、字符串属性</h2>
+    <p><table>
+    <tbody><tr>
+        <th>属性</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>constructor</td>
+        <td>返回创建字符串属性的函数</td>
+    </tr>
+    <tr>
+        <td>length</td>
+        <td>返回字符串的长度</td>
+    </tr>
+    <tr>
+        <td>prototype</td>
+        <td>允许您向对象添加属性和方法</td>
+    </tr>
+    </tbody></table>
+    </p>
+</div>
+<!--******************07*************************-->
+<div id="07">
+    <h2>七、字符串方法</h2>
+    <p>
+    <table >
+    <tbody><tr>
+        <th>方法</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>charAt()</td>
+        <td>返回指定索引位置的字符</td>
+    </tr>
+    <tr>
+        <td>charCodeAt()</td>
+        <td>返回指定索引位置字符的 Unicode 值</td>
+    </tr>
+    <tr>
+        <td>concat()</td>
+        <td>连接两个或多个字符串，返回连接后的字符串</td>
+    </tr>
+    <tr>
+        <td>fromCharCode()</td>
+        <td>将 Unicode 转换为字符串</td>
+    </tr>
+    <tr>
+        <td>indexOf()</td>
+        <td>返回字符串中检索指定字符第一次出现的位置</td>
+    </tr>
+    <tr>
+        <td>lastIndexOf()</td>
+        <td>返回字符串中检索指定字符最后一次出现的位置</td>
+    </tr>
+    <tr>
+        <td>localeCompare()</td>
+        <td>用本地特定的顺序来比较两个字符串</td>
+    </tr>
+    <tr>
+        <td>match()</td>
+        <td>找到一个或多个正则表达式的匹配</td>
+    </tr>
+    <tr>
+        <td>replace()</td>
+        <td>替换与正则表达式匹配的子串</td>
+    </tr>
+    <tr>
+        <td>search()</td>
+        <td>检索与正则表达式相匹配的值</td>
+    </tr>
+    <tr>
+        <td>slice()</td>
+        <td>提取字符串的片断，并在新的字符串中返回被提取的部分</td>
+    </tr>
+    <tr>
+        <td>split()</td>
+        <td>把字符串分割为子字符串数组</td>
+    </tr>
+    <tr>
+        <td>substr()</td>
+        <td>从起始索引号提取字符串中指定数目的字符</td>
+    </tr>
+    <tr>
+        <td>substring()</td>
+        <td>提取字符串中两个指定的索引号之间的字符</td>
+    </tr>
+    <tr>
+        <td>toLocaleLowerCase()</td>
+        <td>根据主机的语言环境把字符串转换为小写，只有几种语言（如土耳其语）具有地方特有的大小写映射</td>
+    </tr>
+    <tr>
+        <td>toLocaleUpperCase()</td>
+        <td>根据主机的语言环境把字符串转换为大写，只有几种语言（如土耳其语）具有地方特有的大小写映射</td>
+    </tr>
+    <tr>
+        <td>toLowerCase()</td>
+        <td>把字符串转换为小写</td>
+    </tr>
+    <tr>
+        <td>toString()</td>
+        <td>返回字符串对象值</td>
+    </tr>
+    <tr>
+        <td>toUpperCase()</td>
+        <td>把字符串转换为大写</td>
+    </tr>
+    <tr>
+        <td>trim()</td>
+        <td>移除字符串首尾空白</td>
+    </tr>
+    <tr>
+        <td>valueOf()</td>
+        <td>返回某个字符串对象的原始值</td>
+    </tr>
+    </tbody></table>
+    </p>
+</div>
+<!--*******************************************-->
+</body>
+<!--****************scriptStart**************************-->
+
+<script>
+//demo3()计算字符串长度
+    function demo3() {
+        var string='检测字符串长度，212aaa。';
+        var length=string.length;
+        alert(length);
+    };
+//    demo5()字符串可以是对象
+    function demo5() {
+        var a='字符串';
+        var b= new String('朱一龙');
+        alert(a+typeof a+'==='+b+typeof b);
+    };
+//
+    function demo6() {
+        var x = "John";
+        var y = new String("John");
+        alert((x === y)); // 结果为 false，因为 x 是字符串，y 是对象
+    }
+</script>
+<!--****************scriptEnd**************************-->
+</html>

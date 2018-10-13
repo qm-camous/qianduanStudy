@@ -1,0 +1,133 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery 效果 - 淡入淡出
+    </div>
+    <div class="panel-body">
+        <!--##############展示区域start##############-->
+        <h3>简介</h3>
+        <p>
+            jQuery Fading 方法:通过 jQuery，您可以实现元素的淡入淡出效果。<br>
+            jQuery 拥有下面四种 fade 方法：<br>
+            fadeIn();<br>
+            fadeOut();<br>
+            fadeToggle();<br>
+            fadeTo()。
+        </p>
+        <!--***************************01******************************-->
+        <div id="01">
+            <p>
+            <h3>一、jQuery fadeIn() 方法:jQuery fadeIn() 用于淡入已隐藏的元素。<br>
+            &nbsp; &nbsp; &nbsp;jQuery fadeOut() 方法:jQuery fadeOut() 用于淡出已隐藏的元素。
+        </h3>
+            </p>
+
+            <div id="01_1"  class="row center-block table-bordered" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" onclick="fade_out()">淡出</button>
+                    <button type="button" class="btn btn-success" onclick="fade_out_speed()">淡出带速度</button>
+                    <button type="button" class="btn btn-success" onclick="fade_in()">淡入</button>
+                    <button type="button" class="btn btn-success" onclick="fade_in_speed()">淡入带速度</button>
+                </div>
+            </div>
+            <div id="01_2" class="row center-block table-bordered" style="background-color: #f2dede;text-align: center">
+                <p>将进酒·君不见黄河之水天上来<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;[唐] 李白<br>
+                    君不见黄河之水天上来，奔流到海不复回。<br>
+                    君不见高堂明镜悲白发，朝如青丝暮成雪。<br>
+                    人生得意须尽欢，莫使金樽空对月。<br>
+                    天生我材必有用，千金散尽还复来。<br>
+                    烹羊宰牛且为乐，会须一饮三百杯。<br>
+                    岑夫子，丹丘生，将进酒，杯莫停。<br>
+                    与君歌一曲，请君为我侧耳听。<br>
+                    钟鼓馔玉不足贵，但愿长醉不复醒。<br>
+                    古来圣贤皆寂寞，惟有饮者留其名。<br>
+                    陈王昔时宴平乐，斗酒十千恣欢谑。<br>
+                    主人何为言少钱，径须沽取对君酌。<br>
+                    五花马，千金裘，<br>
+                    呼儿将出换美酒，与尔同销万古愁。<br>
+                </p>
+            </div>
+        </div>
+<!--************02*************************-->
+        <h3>二、jQuery fadeToggle() 方法</h3>
+        <p>jQuery fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。<br>
+
+            如果元素已淡出，则 fadeToggle() 会向元素添加淡入效果。<br>
+
+            如果元素已淡入，则 fadeToggle() 会向元素添加淡出效果。<br>
+        </p>
+        <div id="02">
+            <div id="02_1">
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" onclick="fade_toggle()">点我可以直接显示和隐藏</button>
+                    <button type="button" class="btn btn-success" onclick="fade_toggle_speed()">显示隐藏可以控制速度</button>
+                </div>
+            </div>
+            <div id="02_2">
+                <img src="../style/IMG/z30.jpg" style="width: 150px;height: 150px;">
+            </div>
+        </div>
+        <!--***********03********************************-->
+        <h3>三、jQuery fadeTo() 方法</h3>
+         <p>jQuery fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）。<br>
+
+            语法:<br>
+
+        <pre>$(selector).fadeTo(speed,opacity,callback);</pre>
+            必需的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br>
+
+            fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。<br>
+
+            可选的 callback 参数是该函数完成后所执行的函数名称。<br>
+         </p>
+        <div id="03">
+
+            <div id="03_1">
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" onclick="fade_to()">点我改变透明度</button>
+                </div>
+            </div>
+
+            <div id="03_2" class="row">
+                <div id="03_4" style="width: 100px;height: 100px;background-color: #f00" class="col-md-3 col-md-offset-1"></div>
+                <div id="03_5" style="width: 100px;height: 100px;background-color: #0f0" class="col-md-3 col-md-offset-1"></div>
+                <div id="03_6" style="width: 100px;height: 100px;background-color: #00f" class="col-md-3 col-md-offset-1"></div>
+            </div>
+        </div>
+        <!--##############展示区域end##############-->
+        <!--##############scriptStart##############-->
+        <script>
+            //fadeIn()直接淡入
+            function fade_in() {
+                $("#01_2").fadeIn();
+            };
+            //fadeIn()淡入带速度
+            function fade_in_speed() {
+                $("#01_2").fadeIn(1500);
+            };
+            //fadeOut()直接淡出
+            function fade_out() {
+                $("#01_2").fadeOut();
+            };
+            //fadeOut()淡出带速度
+            function fade_out_speed() {
+                $("#01_2").fadeOut(1500);
+            };
+            //fade_toggle()直接控制淡入和淡出
+            function fade_toggle() {
+                $("#02_2 img").fadeToggle();
+            };
+            //fade_toggle()控制淡入和淡出带速度
+            function fade_toggle_speed() {
+                $("#02_2 img").fadeToggle(1500);
+            };
+            //fade_to()控制透明度
+            function fade_to() {
+                $("#03_4").fadeTo(1000,0.2);
+                $("#03_5").fadeTo(1000,0.4);
+                $("#03_6").fadeTo(1000,0.6);
+            };
+        </script>
+        <!--##############scriptEnd##############-->
+    </div>
+</div>

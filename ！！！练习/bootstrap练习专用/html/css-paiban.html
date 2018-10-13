@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>全局CSS样式——排版</title>
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- div随机背景色RandomColor -->
+	<script type="text/javascript" src="../js/suijiColor.js"></script>
+	<style type="text/css">
+		body{
+			padding: 50px;
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	.mar-right{
+		margin-right: 30px;
+		font-size: 18px;
+	}
+	</style>
+</head>
+<body>
+<!-- 导航栏Start -->
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">首页</a></li>
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">排版</a>
+						<ul class="dropdown-menu">
+							<li><a href="#yemainzhuti">1.页面主体&标题</a></li>
+							<li><a href="#neilianwenben">2.文本元素</a></li>
+							<li><a href="#wenbenduiqi">3.文本对齐</a></li>
+							<li><a href="#zimudaxiaoxie">4.字母的大小写&缩略语</a></li>
+							<li class="divider"></li>
+							<li><a href="#dizhiwenben">5.地址文本</a></li>
+							<li class="divider"></li>
+							<li><a href="#yinyongwenben">6.引用文本</a></li>
+							<li class="divider"></li>
+							<li><a href="#liebiaopaiban">7.列表排版</a></li>
+							<li class="divider"></li>
+							<li><a href="#daima">8.代码</a></li>
+						</ul>
+					</li>
+					<li><a href="css-shange.html">栅格系统</a></li>
+					<li><a href="css-table.html">表格</a></li>
+					<li><a href="biaodan.html">表单</a></li>
+					<li><a href="anniuVSpic.html">按钮和图片</a></li>
+					<li><a href="xialacaidan.html">下拉菜单</a></li>
+					<li><a href="daohang.html">导航</a></li>
+					<li><a href="medio.html">媒体对象</a></li>
+					<li><a href="mianbanzujian.html">面板组件</a></li>
+					<li><a href="well.html">well组件</a></li>
+					<li><a href="fenye.html">分页与标签</a></li>
+					<li><a href="liebiao.html">常用插件</a></li>
+					
+				</ul>
+			</div>
+		</div>
+</nav>
+	<!-- 导航栏End -->
+	<!-- mainStart -->
+	
+	<!-- 页面主体&文本元素Strat -->
+	<div class="container">
+		<div class="all">
+			<div id="yemainzhuti" class="jumbotron" style="background-color: #FFFFCC">
+				<h2>1.页面主体</h2>
+				<h1>h1:bootstrap</h1>
+				<h2>h2:bootstrap</h2>
+				<h3>h3:bootstrap</h3><small>副标题small</small>
+				<p>p标签的样式</p>
+				<p class="lead">lead类的使用，是文本大小行高和间距发生了变化</p>
+			</div>
+			<div id="neilianwenben" class="jumbotron" style="background-color: #CCFFFF">
+				<h2>2.文本元素</h2>
+				<h3>2.1.内联文本元素</h3>
+				<p><mark>Mark</mark>标签的使用效果</p>
+				<p>
+					<h3>2.2.各种加线条的文本</h3>
+					<del  class="mar-right">del:删除的文本</del>
+					<s  class="mar-right">s:无用的文本</s> 
+					<ins  class="mar-right">ins:插入的文本</ins> 
+					<u  class="mar-right">u:效果同上，下划线文本</u>
+				</p>
+				<p>
+					<h3>2.3.各种强调的文本</h3>
+					<small class="mar-right">small:标准字号的 85%</small> 
+					<strong class="mar-right">strong:加粗 700</strong> 
+					<em class="mar-right">em:倾斜</em> 
+				</p>
+				
+			</div>
+		</div>
+	</div>
+	<!-- *************************************** -->
+	<div class="container">
+	<!-- 页面主体&文本元素End -->
+	<!-- 文本对齐Start -->
+		<div id="wenbenduiqi" class="jumbotron" style="background-color: #FFCCCC">
+					<h3>3.文本对齐</h3>
+					<p class="text-left">文本居左:text-left</p>
+					<p class="text-right">文本居右:text-right</p>
+					<p class="text-center">文本居中:text-center</p>
+					<p class="text-justify">两端对齐，支持度不佳：text-justify</p> 
+					<p class="text-nowrap">不换行：text-nowrap </p></div>
+	<!-- 文本对齐End -->
+	<!-- 字母大小写Start -->
+	<div id="zimudaxiaoxie" class="jumbotron" style="background-color: #CCCCCC">
+			<h2>4.字母的大小写&缩略语：</h2>
+			<p class="text-lowercase">text-lowercase:全部小写Gseg</p>
+			<p class="text-uppercase"> text-uppercase:全部大写rty4etg</p>
+			<p class="text-capitalize">text-capitalize:首字母大写rgteyt4r</p>
+			 <!--缩略语-->
+			 <h3>缩略语</h3>
+			 <p>abbr标签：<abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+			</div>
+	<!-- 字母大小写End -->
+	<!-- 地址文本Start -->
+	<div id="dizhiwenben" class="jumbotron RandomColor">
+		<h2>5.地址文本</h2>
+		<h3>设置地址，去掉了倾斜，设置了行高，底部 20px</h3>
+		<address>
+	       <strong>Twitter, Inc.</strong><br>
+	       795 Folsom Ave, Suite 600<br>
+	       San Francisco, CA 94107<br>
+	       <abbr title="Phone">P:</abbr> (123) 456-7890
+   		</address>
+   		<address>
+       <strong>Full Name</strong><br>
+       <a href="mailto:#">first.last@example.com</a>
+   </address>
+	</div>
+	<!-- 地址文本End -->
+	<!-- 引用文本Start -->
+	<div id="yinyongwenben" class="jumbotron" style="background-color: #CCFFFF">
+		<h2>6.引用文本</h2>
+		<p>
+			<h3>默认样式引用，增加了做边线，设定了字体大小和内外边距</h3>
+		<blockquote class="mar-right">
+		blockquote标签
+		</blockquote>
+		<blockquote class="blockquote-reverse mar-right">
+		blockquote-reverse：反向
+		</blockquote>
+		   <blockquote>
+		       引文1
+		   </blockquote>
+		 
+		   <blockquote class="blockquote-reverse">
+		       blockquote-reverse:引文1
+		   </blockquote>
+		 
+		   <blockquote class="pull-left">
+		       pull-left:引文2
+		   </blockquote>
+		 
+		   <blockquote class="pull-right">
+		      pull-right: 引文2
+			</blockquote>
+		</p></div>
+	<!-- 引用文本End -->
+	<!-- 列表排版Start -->
+	<div id="liebiaopaiban" class="jumbotron" style="background-color: #CCFFCC">
+		<h2>7.列表排版</h2>
+		<p>
+					 <!--  原始列表样式-->
+					 <h3>原始列表样式</h3>
+		   <ul>
+		       <li>原始列表样式</li>
+		       <li>原始列表样式</li>
+		       <li>原始列表样式</li>
+		       <li>原始列表样式</li>
+		       <li>原始列表样式</li>
+		      
+		   </ul>
+		   <!--   清除默认样式-->
+		   <h3>清除默认样式</h3>
+		   <ul class="list-unstyled">
+		       <li>class="list-unstyled":清除默认样式</li>
+		       <li>class="list-unstyled":清除默认样式</li>
+		       <li>class="list-unstyled":清除默认样式</li>
+		       <li>class="list-unstyled":清除默认样式</li>
+		       <li>class="list-unstyled":清除默认样式</li>
+		   </ul>
+		    <!--   清除默认样式并设置成内联-->
+		    <h3>清除默认样式并设置成内联</h3>
+		   <ul class="list-unstyled list-inline">
+		       <li>class="list-unstyled list-inline":清除默认样式并设置成内联</li>
+		       <li>class="list-unstyled list-inline":清除默认样式并设置成内联</li>
+		       <li>class="list-unstyled list-inline":清除默认样式并设置成内联</li>
+		       <li>class="list-unstyled list-inline":清除默认样式并设置成内联</li>
+		       <li>class="list-unstyled list-inline":清除默认样式并设置成内联</li>
+		     
+		   </ul>
+		    <!--  水平排列描述列表-->
+		    <h3>水平排列描述列表dl:class="dl-horizontal "</h3>
+		   
+		   <dl class="dl-horizontal ">
+		       <dt>dt:标题</dt>
+		       <dd>dd:这是内容</dd>
+		   </dl>
+
+		</p>
+	</div>
+	<!-- 列表排版End -->
+	<div id="daima" class="jumbotron" style="background-color: #CCCCFF">
+		<h2>8.代码</h2>
+		<p>
+			<h3>&lt;code&gt;&lt;/code&gt;:内联代码</h3>
+			<code>&lt;section&gt;</code>
+			<h3>kbd:用户输入</h3>
+			press <kbd>ctrl + ,</kbd>
+			<h3>pre: 代码块&lt;pre&gt;&lt/pre&gt;</h3>
+			<pre>&lt;p&gt;Please input...&lt;/p&gt;</pre>  
+		</p>
+	</div>
+	
+	
+	<!-- ***************************** -->
+	</div>
+	<!-- mainEnd -->
+	
+</body>
+</html>

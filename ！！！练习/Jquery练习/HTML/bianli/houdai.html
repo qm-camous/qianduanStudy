@@ -1,0 +1,99 @@
+<div class="panel panel-info">
+    <div class="panel-heading">jQuery 遍历 - 后代 </div>
+    <div class="panel-body">
+        <!--######################01简介###################-->
+        <div id="01">
+            <h3>一、简介</h3>
+            <p>向下遍历 DOM 树<br>
+                下面是两个用于向下遍历 DOM 树的 jQuery 方法：<br>
+                children()<br>
+                find()<br>
+            </p>
+        </div>
+        <!--####################02#####################-->
+        <div id="02">
+            <h3>二、jQuery children() 方法</h3>
+            <p>
+                children() 方法返回被选元素的所有直接子元素。<br>
+                该方法只会向下一级对 DOM 树进行遍历。<br>
+                可以使用可选参数来过滤对子元素的搜索<br>
+            </p>
+            <div class="center-block" style="background-color: #f2dede;text-align: center">
+            <div class="form-group">
+                <button class="btn btn-success" onclick="fun_chil1()">返回被选元素的所有直接子元素</button>
+                <button class="btn btn-success" onclick="fun_chil2()">使用可选参数来过滤对子元素的搜索</button>
+            </div>
+            <div class="descendants" style="width:500px;">div (当前元素)
+                <span>span（儿子元素）</span>
+                <p class="a">p (儿子元素)
+                    <span>span (孙子元素)</span>
+                </p>
+                <p class="b">p (儿子元素)
+                    <span>span (孙子元素)</span>
+                </p>
+            </div>
+            </div>
+        </div>
+        <!--####################03#####################-->
+        <div id="03">
+            <h3>三、jQuery find() 方法</h3>
+            <p>
+                find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。
+            </p>
+            <div class="center-block" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_find()">返回属于 &lt;div&gt; 后代的所有 &lt;span&gt; 元素</button>
+                    <button class="btn btn-success" onclick="fun_find2()">返回属于 &lt;div&gt;所有后代元素</button>
+                </div>
+                <div class="center-block table-bordered">
+                    <div class="c" style="width:500px;">div (当前元素)
+                        <p>p (儿子元素)
+                            <span>span (孙子元素)</span>
+                        </p>
+                        <p>p (儿子元素)
+                            <span>span (孙子元素)</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#########################################-->
+        <!--#########################################-->
+        <!--#########################################-->
+        <!--#########################################-->
+    </div>
+</div>
+<!--***********scriptStart****************-->
+<script>
+ //fun_chil1()返回被选元素的所有直接子元素
+    function fun_chil1() {
+        // alert("0000");
+        $(".descendants").children().css({
+            "color":"red",
+            "border":"2px solid red"
+        });
+    };
+ //fun_chil1()返回被选元素的所有直接子元素
+ function fun_chil2() {
+     // alert("0000");
+     $(".descendants").children("span").css({
+         "color":"#fff",
+         "border":"2px solid #fff"
+     });
+ };
+// fun_find()返回属于 &lt;div&gt; 后代的所有 &lt;span&gt; 元素
+    function fun_find(){
+        $(".c").find("span").css({
+            "color":"#fff",
+            "border":"2px solid #fff"
+        });
+    };
+//    fun_find2()返回属于 &lt;div&gt;所有后代元素
+    function fun_find2() {
+        $(".c").find("*").css({
+            "color":"red",
+            "border":"2px solid red"
+        });
+    };
+</script>
+<!--***********scriptEnd****************-->

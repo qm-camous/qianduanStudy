@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-下拉菜单</title>
+<!-- bootstrap-css -->
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	<!-- jquery.min.js -->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+		body{
+			padding: 50px
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航Start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role=""navigation>
+		<div class="container">
+		<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+		<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="css-paiban.html">排版</a></li>
+				<li><a href="css-shange.html">栅格布局</a></li>
+				<li><a href="css-table.html">表格</a></li>
+				<li><a href="biaodan.html">表单</a></li>
+				<li><a href="anniuVSpic.html">按钮和图片</a></li>
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单</a>
+						<ul class="dropdown-menu">
+							<li><a href="#icon">1.字体图标库</a></li>
+							<li class="divider"></li>
+							<li><a href="#xiala">2.下拉菜单</a></li>
+							<li class="divider"></li>
+							<li><a href="#xiala2">3.按钮式下拉菜单</a></li>
+							<li class="divider"></li>
+							<li><a href="#xiala3">4.分裂式按钮式下拉菜单</a></li>
+							<li class="divider"></li>
+							<li><a href="#xiala4">5.不同大小按钮式下拉菜单</a></li>
+							
+									
+						</ul>
+					</li>
+					<li><a href="daohang.html">导航</a></li>
+
+					<li><a href="medio.html">媒体对象</a></li>
+					<li><a href="mianbanzujian.html">面板组件</a></li>
+					<li><a href="well.html">well组件</a></li>
+					<li><a href="fenye.html">分页与标签</a></li>
+					<li><a href="liebiao.html">常用插件</a></li>
+					
+			</ul>
+		</div>
+		</div>
+	</nav>
+	<!-- 导航End -->
+	<!-- mainStart -->
+	<div class="container all">
+		<!-- 字体图标 -->
+		<div id="icon" class="jumbotron">
+			<h3>1.字体图标库来源于网络，基于&lt;span&gt;不能与其他类公用，且有基类。</h3>
+			<p>
+				<span class="glyphicon glyphicon-ok"></span>
+				详见如下图：
+				<img src="../style/img/01.png">
+				<img src="../style/img/02.png">
+				<img src="../style/img/03.png">
+				<img src="../style/img/04.png">
+				<img src="../style/img/05.png">
+				<img src="../style/img/06.png">
+				<img src="../style/img/07.png">
+			</p>
+		</div>
+		<!-- 下拉菜单 -->
+		<div id="xiala" class="jumbotron">
+			<h3>2.下拉菜单</h3>
+			<p>2.1默认的下拉菜单</p>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">下拉菜单
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					<li><a href="#" role="menuitem">一</a></li>
+					<li><a href="#" role="menuitem">二</a></li>
+					<li><a href="#" role="menuitem">三</a></li>
+					<li><a href="#" role="menuitem">四</a></li>
+				</ul>
+			</div>
+			<!-- 下拉菜单在右边 -->
+			<p>2.2下拉菜单在右边</p>
+			<div class="dropdown pull-right">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">下拉菜单在右边
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+					<li><a href="#" role="menuitem">一</a></li>
+					<li><a href="#" role="menuitem">二</a></li>
+					<li><a href="#" role="menuitem">三</a></li>
+					<li><a href="#" role="menuitem">四</a></li>
+				</ul>
+			</div>
+			<!-- 代标题的下拉菜单 -->
+			<!-- 下拉菜单在右边 -->
+			<p>2.3下拉菜单标题&分割线</p>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">下拉菜单标题&分割线&禁用项
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					<li class="dropdown-header">大写的一到四</li>
+					<!-- 分割线 -->
+					<li class="divider"></li>
+					<li><a href="#" role="menuitem">一</a></li>
+					<li class="divider"></li>
+					<li><a href="#" role="menuitem">二</a></li>
+					<li class="divider"></li>
+					<li class="disabled"><a href="#" role="menuitem">禁用class="disabled"</a></li>
+					<li class="divider"></li>
+					<li><a href="#" role="menuitem">四</a></li>
+					<li class="dropdown-header">小写的1到4</li>
+					<li><a href="#" role="menuitem">1</a></li>
+					<li><a href="#" role="menuitem">2</a></li>
+					<li><a href="#" role="menuitem">3</a></li>
+					<li><a href="#" role="menuitem">4</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 按钮式下拉菜单Start -->
+		<div id="xiala2" class="jumbotron">
+			<h3>3.按钮式下拉菜单</h3>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">按钮式你下拉菜单
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 按钮式下拉菜单End -->
+		<!-- 分列式按钮式下拉菜单Start -->
+		<div id="xiala3" class="jumbotron">
+			<h3>4.分裂式按钮式下拉菜单</h3>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info">分裂式按钮式下拉菜单</button>
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 分裂式按钮式下拉菜单End -->
+		<!-- 不同大小按钮式下拉菜单Start -->
+		<div id="xiala4" class="jumbotron">
+			<h3>5.不同大小按钮式下拉菜单</h3>
+			<div class="btn-group dropup">
+				<button type="button" class="btn btn-info btn-xs">分裂式按钮式下拉菜单</button>
+				<button type="button" class="btn btn-info dropdown-toggle btn-xs" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group dropdown">
+				<button type="button" class="btn btn-info btn-sm">分裂式按钮式下拉菜单</button>
+				<button type="button" class="btn btn-info dropdown-toggle btn-sm" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-info btn-md">分裂式按钮式下拉菜单</button>
+				<button type="button" class="btn btn-info dropdown-toggle btn-md" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info btn-lg">分裂式按钮式下拉菜单</button>
+				<button type="button" class="btn btn-info dropdown-toggle btn-lg" data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 不同大小分裂式按钮式下拉菜单End -->
+
+	</div>
+	<!-- mainEnd -->
+
+</body>
+</html>

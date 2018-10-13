@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap-分页与标签</title>
+<!-- bootstrap-css -->
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	<!-- jquery.min.js -->
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style type="text/css">
+		body{
+			padding: 50px
+		}
+		.all{
+			padding: 40px 15px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 导航Start -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role=""navigation>
+		<div class="container">
+		<div class="navbar-header">
+				<a href="#" class="navbar-brand">祖国一霸</a>
+			</div>
+		<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="css-paiban.html">排版</a></li>
+				<li><a href="css-shange.html">栅格布局</a></li>
+				<li><a href="css-table.html">表格</a></li>
+				<li><a href="biaodan.html">表单</a></li>
+				<li><a href="anniuVSpic.html">按钮和图片</a></li>
+				<li><a href="xialacaidan.html">下拉菜单</a></li>
+				<li><a href="daohang.html">导航</a></li>
+				<li><a href="medio.html">媒体对象</a></li>
+				<li><a href="mianbanzujian.html">面板组件</a></li>
+				<li><a href="well.html">well组件</a></li>
+
+					<li class="active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">分页与标签</a>
+						<ul class="dropdown-menu">
+							
+							<li><a href="#01">1.简单的分页</a></li>
+							<li class="divider"></li>
+							<li><a href="#02">2.单纯的翻页效果</a></li>
+							<li class="divider"></li>
+							<li><a href="#03">3.标签</a></li>
+							<li class="divider"></li>
+							<li><a href="#04">4.徽章</a></li>
+							<li class="divider"></li>
+							<li><a href="#05">5.巨幕</a></li>
+							<li class="divider"></li>
+							<li><a href="#06">6.页头</a></li>
+							<li class="divider"></li>
+							<li><a href="#07">7.缩略图</a></li>
+							<li class="divider"></li>
+							<li><a href="#08">8.提示框</a></li>
+							<li class="divider"></li>
+							<li><a href="#09">9.进度条</a></li>
+							<li class="divider"></li>
+							<li><a href="#10">10.列表组</a></li>
+						</ul>
+					</li>
+					<li><a href="liebiao.html">常用插件</a></li>
+					
+				
+			</ul>
+		</div>
+		</div>
+	</nav>
+	<!-- 导航End -->
+	<!-- mainStart -->
+	<!-- ++++++++++++++分页Start++++++++++++++ -->
+	<div class="container all">
+		<div id="01" class="jumbotron">
+			<h3>1.简单的分页</h3>
+			<!-- *************************** -->
+			<nav>
+				<ul class="pagination pagination-sm">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</nav>
+			<!-- ***************************** -->
+			<nav>
+				<ul class="pagination">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</nav>
+			<!-- ***************************** -->
+			<nav>
+				<ul class="pagination pagination-lg">
+					<li class="disabled"><a href="#">&laquo;</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</nav>
+			<!-- ****************************** -->
+			
+			
+		</div>
+		<!-- ***************单纯的翻页效果Start********** -->
+		<div id="02" class="jumbotron">
+			<h3>2.单纯的翻页效果</h3>
+			<h3>示例一</h3>
+			<nav>
+				<ul class="pager">
+					<li><a href="#">上一页</a></li>
+					<li><a href="#">下一页</a></li>
+				</ul>
+			</nav>
+			<!-- ******************* -->
+			<h3>示例二</h3>
+			<nav>
+				<ul class="pager">
+					<li class="previous"><a href="#">&larr;向前</a></li>
+					<li class="next"><a href="#">&rarr;向后</a></li>
+				</ul>
+			</nav>
+
+		</div>
+		<!-- ***************单纯的翻页效果End********** -->
+			<div id="03" class="jumbotron">
+				<h3>3.标签</h3>
+				<!-- **********标签Start************ -->
+			<span class="label label-default">class="label label-default"默认</span>
+			<span class="label label-danger">class="label label-danger"危险</span>
+			<span class="label label-primary">class="label label-primary"正常</span>
+			<span class="label label-info">class="label label-info"信息</span>
+			<span class="label label-success">class="label label-success"成功</span>
+			<span class="label label-warning">class="label label-warning"警告</span>
+			<h3>这是一个主标题<span class="label label-default">这是关于标题的描述</span></h3>
+			</div>
+				<!-- **********标签End************ -->
+				<!-- **********徽章Start************** -->
+				<div id="04" class="jumbotron">
+					<h3>4.徽章</h3>
+					<p>IE8中可能存在不支持需要注意</p>
+					<p>4.1.示例一</p>
+					<a href="#">短信消息<span class="badge">30</span></a>
+					<p>4.2.示例二</p>
+					<button class="btn btn-success" type="button">短信消息<span class="badge">20</span></button>
+					<p>4.3.示例三：列表组的呈现方式</p>
+					<ul class="nav nav-pills" role="rablist">
+						<li role="presentation" class="active"><a href="#">Home<span class="badge">10</span></a></li>
+						<li role="presentation"><a href="#">Profile<span class="badge">20</span></a></li>
+						<li role="presentation"><a href="#">Message<span class="badge">5</span></a></li>
+					</ul>
+				</div>
+				<!-- **********徽章end************** -->
+				<!-- **********巨幕S	tart***************** -->
+				<div id="05" class="jumbotron">
+					<h3>5.巨幕</h3>
+					<p>改变边距让内容看起来没有那么靠外，看起来更加好看。可以将所有的内容包裹在container中。</p>
+					<p>现在我们看到的当前页面的分块效果就是巨幕jumbotron.详细展示请见下方巨幕吧↓↓↓</p>
+				</div>
+				<div class="jumbotron">
+					<div class="container">
+					<h1>Hello,ladies and gentlemen</h1>
+					<p>欢迎来到祖国一霸小阡陌的学习基地，与龙哥一起奋斗，让生活更快乐。</p>
+					<p>
+						<a href="" class="btn btn-info btn-lg" role="button">开始学习</a>
+					</p>
+					</div>
+				</div>
+				<!-- **********巨幕End***************** -->
+				<!-- ***********页头Start**************** -->
+				<div id="06" class="jumbotron" style="background-color: #6699CC">
+					<h3>6.页头</h3>
+					<p>class="page-header"带来的好处，下方自带一条线，不用自己在写了。↓↓↓</p>
+					<div class="page-header">
+						<h2>祖国一霸<small>欢迎您！</small></h2>
+
+					</div>
+				</div>
+				<!-- ***********页头End**************** -->
+				<!-- *************缩略图Start*********** -->
+				<div id="07" class="jumbotron">
+					<h3>7.缩略图</h3>
+					<p>分为两种，一种默认的只显示一张图片；另外一种自定义内容。</p>
+					<div class="row">
+						<p>7.1.默认的只显示图片</p>
+						<div class="col-xs-6 col-md-3">
+							<a href="#" class="thumbnail">
+								<img src="../style/img/z38.jpg">
+							</a>
+						</div>
+					</div>
+					7.2.自定义内容
+					<div class="row">
+						<div class="col-xs-6 col-md-3">
+							<div class="thumbnail">
+								<img src="../style/img/z39.jpg">
+								<div class="caption">
+									<h3>这是我龙哥。</h3>
+									<p>我知道你们都是喜欢我龙哥，but他被我承包了！吼吼吼！</p>
+									<p><a href="" type="button" class="btn btn-info">
+									爱你</a>
+									<a href="" type="button" class="btn btn-default">pick you</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- *************缩略图End*********** -->
+				<!-- **************警告框Start**************-->
+				<div id="08" class="jumbotron">
+					<h3>8.提示框</h3>
+					<div class="alert alert-success" role="alert">
+						大家好，我是朱一龙！class="alert alert-success"
+					</div>
+					<div class="alert alert-info" role="alert">
+						大家好，我是朱一龙！class="alert alert-info"
+					</div>
+					<div class="alert alert-warning" role="alert">
+						大家好，我是朱一龙！class="alert alert-warning"
+					</div>
+					<div class="alert alert-danger" role="alert">
+						大家好，我是朱一龙！class="alert alert-danger"
+					</div>
+					<!-- ******可关闭的alert警告框****** -->
+					<h3>可关闭的alert警告框</h3>
+					<div class="alert alert-warning" role="alert">
+						<button type="button" class="close" data-dismiss="alert">
+							<span aria-disabled="true">&times;</span>
+						</button>
+						<strong>龙哥最帅！</strong>
+					</div>
+					<h3>带链接的提示框</h3>
+					<div class="alert alert-info" role="alert">
+						如有问题请到
+						<a href="http://www.baidu.com" class="alert-link">百度搜索！</a>
+					</div>
+				</div>
+				<!-- **************警告框End**************-->
+				<!-- **************进度条Start************ -->
+				<div id="09" class="jumbotron">
+					<h3>9.进度条</h3>
+					<h4>9.1.基本的进度条</h4>
+					<!-- <p>aria-valuenow="50":当前的进度数值；</p> -->
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+							<span class="sr-only">60%</span>
+						</div>
+					</div>
+					<h4>9.2.带数值的进度条</h4>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+							60%
+						</div>
+					</div>
+					<h4>9.3.不同颜色的主题的进度条</h4>
+					<p>警告</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+					<p>危险</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+					<p>信息</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+					<p>成功</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+					<h4>9.4.带波浪条纹的进度条</h4>
+					<p>默认</p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+				</div>
+				<p>危险</p>
+				<div class="progress">
+						<div class="progress-bar progress-bar-danger progress-bar-striped" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+				</div>		
+						<p>成功</p>
+						<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+						<p>警告</p>
+						<div class="progress">
+						<div class="progress-bar progress-bar-warning progress-bar-striped" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+						<p>信息</p>
+						<div class="progress">
+						<div class="progress-bar progress-bar-info progress-bar-striped" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							40%
+						</div>
+					</div>
+					<h4>9.5.带动画效果的进度条</h4>
+					<div class="progress">
+						<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+							40%
+						</div>
+					</div>
+					<h4>9.6.带堆叠效果的进度条</h4>
+					<div class="progress">
+						<div class="progress-bar" style="width: 30%"></div>
+						<div class="progress-bar progress-bar-success progress-bar-striped" style="width: 25%"></div>
+					</div>
+
+				</div>
+				<!-- **************进度条End************ -->
+				<!-- 列表组Start -->
+		<div id="10" class="jumbotron">
+			<h3>10.列表组</h3>
+			<p>通常用它承载消息堆列</p>
+			<!-- *********1.1.基本的列表组********** -->
+			<h4>10.1.基本的列表组</h4>
+			<div class="list-group">
+				<ul class="list-group">
+					<li class="list-group-item">我喜欢龙哥</li>
+					<li class="list-group-item">我很喜欢龙哥</li>
+					<li class="list-group-item">我特别喜欢龙哥</li>
+					<li class="list-group-item">我超级喜欢龙哥</li>
+					<li class="list-group-item">我宇宙无敌超级喜欢龙哥</li>
+				</ul>
+			</div>
+			<!-- ************徽章式列表*********** -->
+			<h4>10.2.徽章式列表组</h4>
+			<div class="list-group">
+				<ul class="list-group">
+					<li class="list-group-item"><span class="badge">10</span>我喜欢龙哥</li>
+					<li class="list-group-item"><span class="badge">20</span>我很喜欢龙哥</li>
+					<li class="list-group-item"><span class="badge">30</span>我特别喜欢龙哥</li>
+					<li class="list-group-item"><span class="badge">40</span>我超级喜欢龙哥</li>
+					<li class="list-group-item"><span class="badge">50</span>我宇宙无敌超级喜欢龙哥</li>
+				</ul>
+			</div>
+
+			<!-- ******************************** -->
+			<h4>10.3.带鼠标滑过效果的列表组</h4>
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					<span class="badge">10</span>我喜欢龙哥</a>
+				<a href="#" class="list-group-item active"><span class="badge">20</span>我很喜欢龙哥(选中项)</a>
+				<a href="#" class="list-group-item"><span class="badge">30</span>我特别喜欢龙哥</a>
+				<a href="#" class="list-group-item"><span class="badge">40</span>我超级喜欢龙哥</a>
+				<a href="#" class="list-group-item disabled"><span class="badge">50</span>我宇宙无敌超级喜欢龙哥(禁用状态)</a>
+			</div>
+			<!-- ******************************** -->
+			<h4>10.4.不同样式的列表</h4>
+			<div class="list-group">
+				<a href="#" class="list-group-item list-group-item-danger">
+					<span class="badge">10</span>我喜欢龙哥</a>
+				<a href="#" class="list-group-item list-group-item-info"><span class="badge">20</span>我很喜欢龙哥(选中项)</a>
+				<a href="#" class="list-group-item list-group-item-success"><span class="badge">30</span>我特别喜欢龙哥</a>
+				<a href="#" class="list-group-item list-group-item-warning"><span class="badge">40</span>我超级喜欢龙哥</a>
+				
+			</div>
+			<!-- ******************************** -->
+			<h4>10.4.定制内容</h4>
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					<h4 class="list-group-item-heading">龙哥</h4>
+					<p class="list-group-item-text">龙哥是最帅的，是学习的动力，fighting with 龙哥！</p>
+				</a>
+				<a href="#" class="list-group-item"><h4 class="list-group-item-heading">龙哥</h4>
+					<p class="list-group-item-text">龙哥是最帅的，是学习的动力，fighting with 龙哥！</p></a>
+				<a href="#" class="list-group-item"><h4 class="list-group-item-heading">龙哥</h4>
+					<p class="list-group-item-text">龙哥是最帅的，是学习的动力，fighting with 龙哥！</p></a>
+				<a href="#" class="list-group-item"><h4 class="list-group-item-heading">龙哥</h4>
+					<p class="list-group-item-text">龙哥是最帅的，是学习的动力，fighting with 龙哥！</p></a>
+				<a href="#" class="list-group-item"><h4 class="list-group-item-heading">龙哥</h4>
+					<p class="list-group-item-text">龙哥是最帅的，是学习的动力，fighting with 龙哥！</p></a>
+			</div>
+			<!-- ******************************** -->
+			<!-- ******************************** -->
+		</div>
+		<!-- 列表组End -->
+		<!-- ****************************** -->
+	</div>
+	<!-- +++++++++++++++分页End+++++++++++++ -->
+	<!-- mainEnd -->
+
+</body>
+</html>

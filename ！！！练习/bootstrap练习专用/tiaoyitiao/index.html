@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>主界面</title>
+	<link rel="stylesheet" type="text/css" href="../style/css/bootstrap.css">
+	
+</head>
+<body>
+	<!-- syf选课-->
+	<div class="panel panel-default">
+		<div class="panel-body"></div>
+	<div class="container">
+
+		<div class="row">
+			<!-- 班级列表Start -->
+			<div  class="col-sm-3">
+				<ul id="banji" class="list-group">
+					<li id="ban1" class="list-group-item ac">1班</li>
+					<li  id="ban2" class="list-group-item">2班</li>
+					<li id="ban3" class="list-group-item">3班</li>
+					<li id="ban4" class="list-group-item">4班</li>
+					<li id="ban5" class="list-group-item">5班</li>
+				</ul>
+			</div>
+			
+			<!-- 班级列表End -->
+			<!-- 教师列表Start -->
+			<div class="col-sm-3">
+				<table id="teacher" class="table table-condensed table-hover table-responsive" >
+					<!-- 筛选指定学科的老师Start -->
+					<thead>
+						<div class="input-group">
+							<select id="course" class="form-control"> 
+								<option id="ke1">语文</option>
+								<option id="ke2">数学</option>
+								<option id="ke3">英语</option>
+								<option id="ke4">政治</option>
+							</select>
+							<div class="btn btn-default" onclick="course()">搜索</div>
+							
+						
+						</div>
+					</thead>
+					<!-- 筛选指定学科的老师End -->
+
+					<tr>
+					<th>工号</th>
+					<th>教师姓名</th>
+					<th>任教学科</th>
+					<th>已排班级</th>
+					</tr>
+					<tr id="001"  onclick="teacher()">
+						<td>001</td>
+						<td>张三</td>
+						<td>语文</td>
+						<td></td>
+					</tr>
+					<tr id="002"  onclick="teacher()">
+						<td>002</td>
+						<td>李四</td>
+						<td>数学</td>
+						<td></td>
+					</tr>
+					<tr id="003">
+						<td>003</td>
+						<td>王五</td>
+						<td>英语</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<script type="text/javascript">
+				function teacher(){
+					//alert("3333");
+					
+				$("table#teacher").on("click","tr",function(){
+				//alert("222222");  
+
+					 alert($(this).attr("id"));
+					  // 删除其他兄弟元素的样式   
+					 $(this).siblings('tr').removeClass('success'); 
+				     //设置选中样式
+				     $(this).addClass("success");
+				 });
+				}
+			</script>
+			<!-- 教师列表End -->
+			<!-- 挑选&取消Start -->
+			<div class="col-sm-1">
+				<button class="btn btn-default">>></button>
+				<button class="btn btn-default"><<</button>
+			</div>
+			<!-- 挑选&取消End -->
+			<!-- 课程tableStart -->
+			<div class="col-sm-3">
+				<table class="table table-hover table-responsive">
+					<tr>
+						<th>学科</th>
+						<th>任课教师</th>
+					</tr>
+					<tr>
+						<td>语文</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>数学</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>英语</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>政治</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<!-- 课程tableEnd -->
+		</div>
+	</div>
+	</div>
+</body>
+
+<!-- jquery -->
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<!-- 获取班级的id -->
+	<script type="text/javascript" src="js/banji.js"></script>
+</html>

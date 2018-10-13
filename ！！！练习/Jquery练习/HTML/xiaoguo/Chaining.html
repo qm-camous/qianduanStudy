@@ -1,0 +1,87 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        jQuery - 链(Chaining)
+    </div>
+    <div class="panel-body">
+        <!--################01简介###################-->
+        <div id="01">
+            <h3>一、简介</h3>
+            <p>
+            通过 jQuery，可以把动作/方法链接在一起。<br>
+
+            Chaining 允许我们在一条语句中运行多个 jQuery 方法（在相同的元素上）。<br>
+
+            jQuery 方法链接<br>
+            直到现在，我们都是一次写一条 jQuery 语句（一条接着另一条）。<br>
+
+            不过，有一种名为链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条。<br>
+
+            提示： 这样的话，浏览器就不必多次查找相同的元素。<br>
+
+            如需链接一个动作，您只需简单地把该动作追加到之前的动作上。<br>
+            </p>
+        </div>
+        <!--##################02示例一#################-->
+        <div id="02">
+            <h3>二、示例一</h3>
+            <p>
+                下面的例子把 css()、slideUp() 和 slideDown() 链接在一起。"p1" 元素首先会变为红色，然后向上滑动，再然后向下滑动：
+            </p>
+            <div class="row table-bordered center-block" style="text-align: center;background-color: #f2dede">
+                <button type="button" class="btn btn-success" onclick="chaining01()">开始操作</button>
+                <button type="button" class="btn btn-success" onclick="mydemo()">不停上拉下滑</button>
+            </div>
+            <div id="02_2" class="row table-bordered center-block" style="background-color: #f2dede;">
+
+                <div id="02-3" style="height: 100px;width:100px;position: relative;">
+                    <p>Fighting!</p>
+                </div>
+            </div>
+        </div>
+        <!--###################################-->
+        <!--###################################-->
+        <!--#############script区域######################-->
+        <script>
+            //mydemo()
+            function mydemo() {
+                var container = $("#02-3");
+                var text = $("#02-3 p");
+               container.animate({"left":'200px',"width":"300px"});
+               container.animate({"fontSize":"3em"},function () {
+                       container.css({"color":"#f00"});
+                       container.slideUp(1500,function () {
+                           container.slideDown(1500,function () {
+                           //     container.removeClass();
+                               mydemo();
+                           })
+                       });
+               });
+
+
+            };
+            
+            
+            
+            //chaining01()
+            function chaining01() {
+                $("#02_2 h3").css({
+                    "font-size":"25px",
+                    "color":"#f00"
+                }).animate({
+                    left:'200px',
+                    opacity:0.4
+
+                }).toggle(1500,function () {
+                    chaining01();
+                });
+            };
+
+
+        </script>
+        <!--########################################-->
+        <script>
+
+        </script>
+        <!--#################################-->
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+<a href="../index.html">返回首页</a>
+<!--******************01********************-->
+<div id="01">
+    <h2>一、search()方法使用正则表达式</h2>
+    <p>
+        <button onclick="demo1()">点击执行</button>
+    </p>
+</div>
+<!--***************02********************-->
+<div id="02">
+    <h2>二、search()方法使用字符串</h2>
+    <p>
+        search方法可使用字符串作为参数，字符串参数会转换为正则表达式：
+        <button onclick="demo2()">点击执行</button>
+    </p>
+</div>
+<!--*******************03*******************-->
+<div id="03">
+    <h2>三、replace（）方法使用正则表达式</h2>
+    <p>
+        使用正则表达式且不区分大小写将字符串中的文本替换：
+        <button onclick="demo3()">点击执行</button>
+    </p>
+</div>
+<!--********************04******************-->
+<div id="04">
+    <h2>四、replace()方法使用字符串</h2>
+    <p></p>
+</div>
+<!--**************************************-->
+</body>
+<!--****************scriptStart******************-->
+<script>
+    //demo1()search()方法使用正则表达式
+    function demo1() {
+        var str='asIjkfhiweouhioeasIlfvnw63dgtf  6g1263dr4hg';
+        var n=str.search(/i/i);//使用正则表达式搜索“i”字符串，且不区分大小写；
+        alert(n);
+    };
+//    demo2()search使用字符串
+    function demo2() {
+        var str='asIjkfhiweouhioeasIlfvnw63dgtf  6g1263dr4hg';
+        var n=str.search("weouh");
+        alert(n);
+    };
+//    demo3()replace（）方法使用正则表达式
+    function demo3() {
+       var str="My name is SunYufeng.";
+       var n=str.replace(/SunYufeng/i,"朱一龙");
+       alert("替换前："+str+"===="+"替换后的文本"+n);
+    };
+
+</script>
+<!--****************scriptEnd******************-->
+</html>

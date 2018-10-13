@@ -1,0 +1,164 @@
+<div class="panel panel-info">
+    <div class="panel-heading"> jQuery 遍历 - 同胞(siblings)</div>
+    <div class="panel-body">
+        <!--#####################01简介########################-->
+        <div id="01">
+            <h3>一、在 DOM 树中水平遍历</h3>
+            <p>
+                有许多有用的方法让我们在 DOM 树进行水平遍历：<br>
+                siblings()<br>
+                next()<br>
+                nextAll()<br>
+                nextUntil()<br>
+                prev()<br>
+                prevAll()<br>
+                prevUntil()<br>
+            </p>
+        </div>
+        <!--#####################02########################-->
+        <div id="02">
+            <h3>二、jQuery siblings() 方法</h3>
+            <p>
+                siblings() 方法返回被选元素的所有同胞元素。
+
+                下面的例子返回 &lt;h2&gt; 的所有同胞元素：
+            </p>
+            <div class="center-block" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_silbings1()">返回 &lt;h2&gt; 的所有同胞元素</button>
+                    <button class="btn btn-success" onclick="fun_silbings2()">返回属于 &lt;h2&gt; 的同胞元素的所有 &lt;p&gt;元素</button>
+                </div>
+                <div class="siblings">div (父元素)
+                    <p>p</p>
+                    <span>span</span>
+                    <h2>h2</h2>
+                    <h3>h3</h3>
+                    <p>p</p>
+                 </div>
+            </div>
+        </div>
+        <!--######################03#######################-->
+        <div id="03">
+            <h3>三、jQuery next() 方法</h3>
+            <p>
+                next() 方法返回被选元素的下一个同胞元素。<br>
+
+                该方法只返回一个元素。
+            </p>
+        </div>
+        <div class="center-block" style="background-color: #f2dede;text-align: center">
+            <div class="form-group">
+                <button class="btn btn-success" onclick="fun_next()">返回 &lt;h2&gt; 的下一个同胞元素</button>
+            </div>
+            <div id="03_1">
+                <div class="siblings">div (父元素)
+                    <p>p</p>
+                    <span>span</span>
+                    <h2>h2</h2>
+                    <h3>h3</h3>
+                    <p>p</p>
+                </div>
+            </div>
+        </div>
+        <!--#####################04########################-->
+        <div id="04">
+            <h3>四、jQuery nextAll() 方法</h3>
+            <p>
+                nextAll() 方法返回被选元素的所有跟随的同胞元素。
+
+            </p>
+            <div class="center-block" style="text-align: center;background-color: #f2dede">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_nextall()">返回 &lt;h2&gt;的所有跟随的同胞元素</button>
+                </div>
+                <div id="04_1">
+                    <div class="siblings">div (父元素)
+                        <p>p</p>
+                        <span>span</span>
+                        <h2>h2</h2>
+                        <h3>h3</h3>
+                        <p>p</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--####################05#########################-->
+        <div id="05">
+            <h3>五、jQuery nextUntil() 方法</h3>
+
+            <p>
+                nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。
+
+            </p>
+            <div class="center-block" style="background-color: #f2dede;text-align: center">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="fun_nextutil()">返回介于 &lt;h2&gt; 与 &lt;h6&gt; 元素之间的所有同胞元素</button>
+                </div>
+                <div id="05_1">
+                    <div class="siblings">div (父元素)
+                        <p>p</p>
+                        <span>span</span>
+                        <h2>h2</h2>
+                        <h3>h3</h3>
+                        <h4>h4</h4>
+                        <h5>h5</h5>
+                        <h6>h6</h6>
+                        <p>p</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--#####################06########################-->
+        <div id="06">
+            <div class="center-block" style="background-color: #2aabd2">
+                <h3>六、jQuery prev(), prevAll() & prevUntil() 方法 </h3>
+                <p>
+                    prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，
+                    只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞之前元素遍历，而不是之后元素遍历）。
+                </p>
+            </div>
+        </div>
+        <!--#############################################-->
+        <!--#############################################-->
+        <!--#############################################-->
+    </div>
+</div>
+<!--*****************scriptStart***********************-->
+<script>
+//fun_silbings1()">返回 &lt;h2&gt; 的所有同胞元素
+    function fun_silbings1() {
+        $(".siblings h2").siblings().css({
+            "color":"red",
+            "border":"2px solid red"
+        });
+    };
+//    fun_silbings1()">返回属于 &lt;h2&gt; 的同胞元素的所有 &lt;p&gt;元素
+    function fun_silbings2() {
+        $(".siblings h2").siblings("p").css({
+            "color":"#fff",
+            "border":"2px solid #fff"
+        });
+    };
+//    fun_next()">返回 &lt;h2&gt; 的下一个同胞元素
+    function fun_next() {
+        $("#03_1 .siblings h2").next().css({
+            "color":"red",
+            "border":"2px solid red"
+        });
+    };
+//    fun_nextall()返回 &lt;h2&gt;的所有跟随的同胞元素
+    function fun_nextall() {
+        $("#04_1 .siblings h2").nextAll().css({
+            "color":"#fff",
+            "border":"2px solid #fff"
+        });
+    };
+//    fun_nextutil()">返回介于 &lt;h2&gt; 与 &lt;h6&gt; 元素之间的所有同胞元素
+    function fun_nextutil() {
+        $("#05_1 .siblings h2").nextUntil("h6").css({
+            "color":"red",
+            "border":"2px solid red"
+        });
+    };
+</script>
+<!--*****************scriptEnd***********************-->
